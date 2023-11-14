@@ -1,0 +1,35 @@
+@import url("../../variables.css");
+footer {
+  background-color: var(--background-color);
+}
+.footer-container {
+  display: flex;
+  gap: 119px;
+}
+.footer-container > nav {
+  display: flex;
+  gap: 124px;
+}
+
+nav > ul > h3 {
+  text-wrap: nowrap;
+}
+
+nav > ul > li > a {
+  color: #ddd;
+  font-family: Poppins;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 14px;
+}
+
+.circle {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  background-color: #3D4259;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

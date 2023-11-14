@@ -1,0 +1,102 @@
+.header-bg {
+  background: #141414;
+}
+.Header2MainContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 89px;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 7.48px;
+}
+
+.logo-container > img {
+  width: 55px;
+  height: 56px;
+}
+
+.logo-container > span {
+  color: #fff;
+  font-size: 25px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 150%;
+}
+
+.Language-Container {
+  border-radius: 5px;
+  background: #313131;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.Header1-Main-Container {
+  display: flex;
+  align-items: center;
+  gap: 134px;
+  justify-content: center;
+  height: 89px;
+}
+
+.Header-Nav-Container > nav > ul {
+  display: flex;
+  gap: 12px;
+}
+.Header-Nav-Container {
+  display: flex;
+  align-items: center;
+  gap: 60px;
+}
+
+.header-btn{
+  display: flex;
+  gap: 10px;
+}
+
+.header-btn > :nth-child(1) {
+  border-radius: 100px;
+  border: 1px solid #6b56ff;
+  background: #141414;
+  text-align: center;
+  color: #fff;
+  text-align: center;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 40%; /* 6px */
+  text-transform: capitalize;
+  height: 32px;
+  width: 117px;
+}
+
+.header-btn > :nth-child(2) {
+  border-radius: 100px;
+  border: 1px solid #000;
+  background: linear-gradient(
+    93deg,
+    #aa56ff -20.75%,
+    #bc63ff 11.84%,
+    #6200c6 53.76%,
+    #3e007d 102.96%
+  );
+  width: 117px;
+  height: 32px;
+  color: #fff;
+  text-align: center;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 150%; /* 22.5px */
+  text-transform: capitalize;
+}
+
+.Header-Nav-Container > nav > ul > li > a > img {
+  margin-left: 6px;
+}

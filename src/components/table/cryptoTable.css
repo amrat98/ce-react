@@ -1,0 +1,62 @@
+@import url("../../variables.css");
+.crypto-table-main-container {
+  display: flex;
+  flex-direction: column;
+  gap: 38px;
+}
+.table-nav {
+  display: flex;
+  align-items: center;
+  gap: 55px;
+  justify-content: center;
+}
+.table-nav > li {
+  text-wrap: nowrap;
+  color: #d4d4d4;
+  text-align: center;
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 150%;
+}
+
+.crypto-table {
+  border-radius: 55px;
+  border: 1px solid #484848;
+  background: #161616;
+  padding: 72px 59px;
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+}
+
+.crypto-table > thead > tr  {
+  display: flex;
+  gap: 130px;
+  /* justify-content: flex-start; */
+}
+.crypto-table > thead > tr > th {
+  color: #aeaeae;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.crypto-table > tbody  {
+  display: flex;
+  flex-direction: column;
+  gap: 21.25px;
+}
+.crypto-table > tbody > tr {
+  display: flex;
+  gap: 130px;
+  /* justify-content: flex-start; */
+}
+
+.crypto-table > tbody > tr > :nth-child(2) {
+  color: #fff;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+}

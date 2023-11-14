@@ -1,0 +1,202 @@
+.hero-sectoion-container {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+}
+
+.heading {
+  color: #fff;
+  font-family: Poppins;
+  font-size: 64px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 150%;
+}
+.linear-gradient {
+  background: linear-gradient(
+    90deg,
+    #aa56ff 0.95%,
+    #bc63ff 14.95%,
+    #6200c6 27.98%,
+    #3e007d 43.6%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.hero-sectoion-container > div {
+  display: flex;
+  flex-direction: column;
+  gap: 41px;
+}
+
+.hero-sectoion-container > img {
+  height: 410px;
+}
+
+.hero-sectoion-container > div > p {
+  color: #fff;
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 150%;
+}
+
+.hero-sectoion-container > div > button {
+  border-radius: 30px;
+  background: linear-gradient(
+    90deg,
+    #aa56ff 1.93%,
+    #bc63ff 33.59%,
+    #6200c6 62.37%,
+    #3e007d 94.03%
+  );
+  color: #fff;
+  text-align: center;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 150%; /* 30px */
+  text-transform: capitalize;
+  padding: 14px 0px;
+  max-width: 270px;
+}
+.trade-anytime-anywhere-main-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 70px;
+}
+
+.trade-anytime-anywhere-main-container > div > p {
+  color: #fff;
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 150%;
+  text-align: center;
+}
+.trade-anytime-anywhere-main-container > img {
+  height: 505px;
+  margin-top: 22px;
+}
+
+.application-btn-container {
+  display: flex;
+  gap: 45px;
+  justify-content: center;
+}
+
+.application-btn-container > button {
+  height: 58px;
+  border-radius: 30px;
+  background: #fff;
+  color: #000;
+  text-align: center;
+  font-size: 25px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 150%; /* 37.5px */
+  text-transform: capitalize;
+  padding: 10px 40px;
+}
+
+.application-btn-container > button {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+
+.Core-Product-Main-Container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: flex-start;
+}
+
+.Count-Main-Container {
+  display: flex;
+  align-items: center;
+  gap: 100px;
+}
+.Count-Main-Container > div {
+  text-align: center;
+}
+.Count-Main-Container > div > span {
+  text-align: center;
+  font-size: 64px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+}
+
+.Count-Main-Container > div > p {
+  color: #fff;
+  text-align: center;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+}
+
+.Core-Product-Head > p {
+  color: #fff;
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+  margin-top: 21px;
+}
+
+.Core-Product-Key-Points {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.Core-Product-Key-Points > div > h3 {
+  color: #fff;
+  font-size: 35px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 150%;
+}
+
+.Core-Product-Key-Points > div > p {
+  color: #fff;
+  font-family: Poppins;
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+  margin-top: 14px;
+}
+
+.Core-Product-Left-Box {
+  margin-top: 89px;
+  display: flex;
+  flex-direction: column;
+  gap: 58px;
+}
+
+.Core-Product-Right-Box {
+  width: min-content;
+  position: relative;
+}
+
+.Core-Product-Right-Box > img {
+  height: 557.385px;
+  width: 595.739px;
+}
+
+.home-bg-background {
+  background-color: #141414;
+  display: flex;
+  flex-direction: column;
+  gap: 160px;
+}
+
+.hero-section {
+  margin-top: 90px;
+}

@@ -1,0 +1,35 @@
+.Term-Condition-Container {
+  display: flex;
+  flex-direction: column;
+  gap: 58px;
+  background: #18191D;
+  padding-bottom: 125px;
+}
+
+.legal-head {
+  color: #fff;
+  font-size: 35px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  margin-top: 47px;
+  margin-bottom: 58px;
+}
+
+.legal-title {
+  color: #fff;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  margin-bottom: 19px;
+}
+
+.text {
+  color: #78819f;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 22px;
+  margin-bottom: 42px;
+}
