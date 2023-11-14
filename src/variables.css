@@ -1,0 +1,15 @@
+:root {
+  --background-color: #121212;
+  --heading-color: #fff;
+  --text-primary-color: #fff;
+  --text-secondary-color: #ddd;
+  --text-secondary-dark-color: #D4D4D4;
+  --font-small: 7px;
+  --font-medium: 12px;
+  --font-large: 20px;
+  --font-extra-large: 35px;
+  --font-XXL: 35px;
+  --heading: 64px;
+  --sub-heading: 28px;
+  --link: 14px;
+}
