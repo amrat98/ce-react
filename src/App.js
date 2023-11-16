@@ -8,6 +8,8 @@ import { AboutUs } from "./pages/legal/about/About";
 import { Login } from "./components/auth/Login";
 import { PrivacyPolicy } from "./pages/legal/privacy-policy/PrivacyPolicy";
 import { FAQ } from "./pages/legal/faq/Faq";
+import { Kyc } from "./pages/profile/kyc/Kyc";
+import { Profile } from "./pages/profile/Profile";
 import "./App.css";
 function App() {
   return (
@@ -23,6 +25,8 @@ function App() {
           <Route path="/about-us" element={<AboutUs />}></Route>
           <Route path="/private-policy" element={<PrivacyPolicy />}></Route>
           <Route path="/faq" element={<FAQ />}></Route>
+          <Route path="/kyc" element={<Kyc />}></Route>
+          <Route path="/profile" element={<Profile />}></Route>
         </Routes>
       </BrowserRouter>
     </>
