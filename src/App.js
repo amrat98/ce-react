@@ -10,6 +10,7 @@ import { PrivacyPolicy } from "./pages/legal/privacy-policy/PrivacyPolicy";
 import { FAQ } from "./pages/legal/faq/Faq";
 import { Kyc } from "./pages/profile/kyc/Kyc";
 import { Profile } from "./pages/profile/Profile";
+import { TransferHistory } from "./pages/profile/transfer-history/TransferHistory";
 import "./App.css";
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
           <Route path="/faq" element={<FAQ />}></Route>
           <Route path="/kyc" element={<Kyc />}></Route>
           <Route path="/profile" element={<Profile />}></Route>
+          <Route path="/transfer-history" element={<TransferHistory />}></Route>
         </Routes>
       </BrowserRouter>
     </>

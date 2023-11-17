@@ -1,0 +1,54 @@
+.Account-Container {
+  display: flex;
+  gap: 58px;
+  padding: 50px 40px;
+}
+
+.Account-Container > * {
+  width: 100%;
+}
+
+.Bank-Container {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  border-right: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.Bank-Container > p {
+  color: #fff;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin-top: 31px;
+}
+
+.Account-Container > .Account-Left-Box {
+  display: flex;
+  flex-direction: column;
+}
+
+.Account-Container > .Account-Right-Box {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.Account-Right-Box > p {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.Account-Right-Box > h1 {
+  color: #fff;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}

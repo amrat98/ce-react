@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { Header } from "../../components/header/Header";
 import { Footer } from "../../components/footer/Footer";
 import { Sidebar } from "../../components/sidebar/Sidebar";
@@ -7,8 +8,8 @@ import { KYC2 } from "./kyc/Kyc2";
 import { ProfileInfo } from "./ProfileInfo";
 import { Kyc } from "./kyc/Kyc";
 import { Security } from "./security/Security";
+import { Account } from "./accounts/Accounts";
 import "./Profile.css";
-import { useState } from "react";
 const option = [
   { label: "Profile", bool: true },
   { label: "Security", bool: false },
@@ -59,6 +60,7 @@ export const Profile = () => {
                   {title === "KYC" && <KYC2 />}
                   {title === "Security" && <Security />}
                   {title === "KYC List" && <Kyc />}
+                  {title === "Accounts" && <Account />}
                 </Template>
               </div>
             </div>
