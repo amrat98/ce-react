@@ -182,7 +182,7 @@ export const HomePage = () => {
                   </div>
                 </div>
                 <div className="Core-Product-Right-Box">
-                  <img src="/assets/images/Product-img.webp" alt="" />
+                  <img src="/assets/images/App-Mob-View.webp" alt="" />
                 </div>
               </div>
             </div>
