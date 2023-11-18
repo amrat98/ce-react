@@ -200,3 +200,16 @@
 .hero-section {
   margin-top: 90px;
 }
+
+/*  */
+
+.homepage-cards-main-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.homepage-cards-main-container > img {
+  max-width: 361px;
+  min-height: 134px;
+}
+

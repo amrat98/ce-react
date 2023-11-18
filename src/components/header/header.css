@@ -41,7 +41,7 @@
   display: flex;
   align-items: center;
   gap: 134px;
-  justify-content: center;
+  justify-content: space-between;
   height: 89px;
 }
 
