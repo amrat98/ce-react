@@ -12,8 +12,8 @@ import { Kyc } from "./pages/profile/kyc/Kyc";
 import { Profile } from "./pages/profile/Profile";
 import { TransferHistory } from "./pages/profile/transfer-history/TransferHistory";
 import { LoginHistory } from "./pages/profile/login-history/LoginHistory";
-import "./App.css";
 import { Notification } from "./pages/profile/notification/Notification";
+import "./App.css";
 function App() {
   return (
     <>
@@ -32,7 +32,7 @@ function App() {
           <Route path="/profile" element={<Profile />}></Route>
           <Route path="/transfer-history" element={<TransferHistory />}></Route>
           <Route path="/login-history" element={<LoginHistory />}></Route>
-          <Route path="/notification" element={<Notification/>}></Route>
+          <Route path="/notification" element={<Notification />}></Route>
         </Routes>
       </BrowserRouter>
     </>
