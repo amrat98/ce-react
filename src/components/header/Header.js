@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 export const Header = () => {
   return (
     <>
-      <header className="header-bg">
+      <header className="header-bg cmn-padding">
         <div className="Header1-Container">
           <div>
             <div className="Header1-Main-Container">
@@ -71,8 +71,8 @@ export const Header = () => {
                   </ul>
                 </nav>
                 <div className="header-btn">
-                  <button>Login</button>
-                  <button>Sign Up</button>
+                  <button><Link to={'/login'} style={{color: "#fff"}}>Login</Link></button>
+                  <button><Link to={'/create-account'} style={{color: "#fff"}}>Sign Up</Link></button>
                 </div>
               </div>
             </div>

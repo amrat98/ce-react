@@ -1,0 +1,16 @@
+.No-Data-Container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 205px;
+  background-color: #141416;
+}
+
+.No-Data-Container > p {
+  color: #fff;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}

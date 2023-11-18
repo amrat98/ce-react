@@ -1,0 +1,54 @@
+
+.Dropdown-Container {
+  border: 1px solid #393d4a;
+  stroke: rgba(79, 85, 104, 0.63);
+  padding: 13px 25px;
+  border-radius: 30px;
+}
+
+.Document-Main-Container > h3 {
+  color: #fff;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin-bottom: 10px;
+}
+
+.Dropdown-Container > div {
+  display: flex;
+  height: 40px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.Dropdown-Container > div > span {
+  color: #4f5568;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+
+
+.Dropdown-Container > ul > li {
+  display: flex;
+  padding-top: 13px;
+  justify-content: space-between;
+}
+
+.Dropdown-Container > ul > li > span {
+  color: #fff;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.Document-Main-Container > img {
+  height: 251px;
+  width: 100%;
+  margin-top: 30px;
+  border-radius: 10px;
+}
