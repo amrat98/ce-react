@@ -1,0 +1,52 @@
+.Cmn-Dropdown-Container {
+  width: 100%;
+}
+.Cmn-Dropdown-Container > h3 {
+  color: #fff;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin-bottom: 9.96px;
+}
+.Cmn-Dropdown {
+  border-radius: 50px;
+  border: 1px solid rgba(79, 85, 104, 0.63);
+  padding: 0px 21.46px;
+  width: 100%;
+}
+.Cmn-Dropdown-Placeholder-Container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 50px;
+}
+.Drodown-UnSelect-Item {
+  color: #4f5568;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.Drodown-Select-Item {
+  color: #fff;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+
+.Cmn-Dropdown-Items-Container {
+  margin-bottom: 12px;
+}
+.Cmn-Dropdown-Items-Container > li {
+  color: #fff;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  padding-top: 13px;
+  line-height: normal;
+}
+
+
