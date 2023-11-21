@@ -1,11 +1,11 @@
 import "./Input.css";
-export const Input = ({ label, placeholder, name }) => {
+export const Input = ({ label, placeholder, name , type}) => {
   return (
     <>
       <div className="Input-Box">
         <label>{label}</label>
         <div>
-          <input placeholder={placeholder} name={name} />
+          <input placeholder={placeholder} name={name} type={type}/>
         </div>
       </div>
     </>
