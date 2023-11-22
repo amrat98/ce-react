@@ -13,6 +13,7 @@ import { Profile } from "./pages/profile/Profile";
 import { TransferHistory } from "./pages/profile/transfer-history/TransferHistory";
 import { LoginHistory } from "./pages/profile/login-history/LoginHistory";
 import { Notification } from "./pages/profile/notification/Notification";
+import { ContactUs } from "./pages/legal/contact-us/ContactUs";
 import { P2P } from "./pages/p2p/P2P";
 import "./App.css";
 function App() {
@@ -35,6 +36,7 @@ function App() {
           <Route path="/login-history" element={<LoginHistory />}></Route>
           <Route path="/notification" element={<Notification />}></Route>
           <Route path="/test" element={<P2P />}></Route>
+          <Route path="/contact-us" element={<ContactUs />}></Route>
         </Routes>
       </BrowserRouter>
     </>
