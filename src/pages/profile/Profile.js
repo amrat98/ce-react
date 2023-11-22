@@ -9,6 +9,7 @@ import { ProfileInfo } from "./ProfileInfo";
 import { Kyc } from "./kyc/Kyc";
 import { Security } from "./security/Security";
 import { Account } from "./accounts/Accounts";
+import { Nominee } from "./nominee/Nominee";
 import "./Profile.css";
 const option = [
   { label: "Profile", bool: true },
@@ -61,6 +62,7 @@ export const Profile = () => {
                   {title === "Security" && <Security />}
                   {title === "KYC List" && <Kyc />}
                   {title === "Accounts" && <Account />}
+                  {title === "Nominee" && <Nominee/>}
                 </Template>
               </div>
             </div>
