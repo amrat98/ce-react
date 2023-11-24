@@ -14,6 +14,8 @@ import { TransferHistory } from "./pages/profile/transfer-history/TransferHistor
 import { LoginHistory } from "./pages/profile/login-history/LoginHistory";
 import { Notification } from "./pages/profile/notification/Notification";
 import { ContactUs } from "./pages/legal/contact-us/ContactUs";
+import { Market } from "./pages/market/Market";
+import { Exchange } from "./pages/exchange/Exchange";
 import { P2P } from "./pages/p2p/P2P";
 import "./App.css";
 function App() {
@@ -35,8 +37,9 @@ function App() {
           <Route path="/transfer-history" element={<TransferHistory />}></Route>
           <Route path="/login-history" element={<LoginHistory />}></Route>
           <Route path="/notification" element={<Notification />}></Route>
-          <Route path="/test" element={<P2P />}></Route>
+          <Route path="/test" element={<Market />}></Route>
           <Route path="/contact-us" element={<ContactUs />}></Route>
+          <Route path="/test1" element={<Exchange/>}></Route>
         </Routes>
       </BrowserRouter>
     </>

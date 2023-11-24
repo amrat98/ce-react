@@ -1,0 +1,47 @@
+.Dynamic-Table-Container > table {
+  width: 100%;
+}
+.caret-icon-box {
+  position: relative;
+  margin-left: 7px;
+}
+
+.caret-icon-box > :nth-child(1) {
+  position: absolute;
+  top: 35%;
+  transform: translate(0px, -50%);
+  cursor: pointer;
+}
+
+.caret-icon-box > :nth-child(2) {
+  position: absolute;
+  transform: rotateX(180deg);
+  top: 60%;
+  cursor: pointer;
+}
+
+.market-table-btn-td {
+  display: flex;
+  gap: 15px;
+}
+
+.market-table-btn-td > button {
+  border-radius: 100px;
+  border: 1px solid #aa56ff;
+  padding: 0 26px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 24px;
+  color: #fff;
+  background: transparent;
+}
+
+.market-table-btn-td > button:hover {
+  background: linear-gradient(93deg, #AA56FF -20.75%, #BC63FF 11.84%, #6200C6 53.76%, #3E007D 102.96%);
+  border: 1px solid #000;  
+}
