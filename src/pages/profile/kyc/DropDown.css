@@ -52,3 +52,11 @@
   margin-top: 30px;
   border-radius: 10px;
 }
+@media (max-width: 767px) {
+  .Document-Main-Container > h3 {
+    font-size: 15px;
+  }
+  .Document-Upload-Container {
+    flex-direction: column;
+  }
+}

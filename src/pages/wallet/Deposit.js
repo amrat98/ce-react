@@ -19,7 +19,7 @@ const Network = [
 ];
 export const Deposit = () => {
   return (
-    <div className="Wallet-Btm-Container" style={{ background: "#000" }}>
+    <div className="Wallet-Btm-Container">
       <div className="Wallet-Form-Box">
         <h1 className="Wallet-Form-head">Deposit Crypto</h1>
         <DropDown title={"Select Coin:"} option={Coin} />

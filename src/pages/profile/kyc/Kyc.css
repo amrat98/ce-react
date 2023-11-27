@@ -88,10 +88,12 @@ tbody > tr > td {
   position: relative;
   text-align: center;
   height: 41px;
+  cursor: pointer;
+  flex: 1;
 }
 .Kyc-Nav-List > li > img {
   min-height: 41px;
-  max-width: 291px;
+  width: 100%;
 }
 .Kyc-Nav-List > li > span {
   color: #fff;
@@ -136,3 +138,4 @@ tbody > tr > td {
     flex-direction: column;
     gap: 60px;
 }
+

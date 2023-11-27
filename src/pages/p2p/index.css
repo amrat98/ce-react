@@ -1,8 +1,10 @@
 .P2P-Container {
   background: #18191d;
+  padding: 54px 0px;
 }
 .P2P-About-Container {
   text-align: center;
+  padding-bottom: 33px;
 }
 
 .P2P-About-Container > h1 {
@@ -252,6 +254,14 @@
   margin-bottom: 21.75px;
 }
 
+.PostAdd-Container {
+  padding: 40px 35px;
+}
+
+.P2P-Dashboard-Container {
+  padding: 40px 35px;
+}
+
 .PostAdd-Container > p {
   color: #78819f;
   font-size: 14px;
@@ -467,10 +477,8 @@
   background: transparent;
 }
 
-
 .drpDwn-Container {
   display: flex;
-  
 }
 
 .P2P-drpDwn-Container {
@@ -512,11 +520,88 @@
   margin-left: 16px;
 }
 
-
 .P2P-Search-Input-Right {
   flex: 0.25;
 }
 
 .P2P-Search-Table {
   margin-top: 31px;
+}
+
+.BankTransfer-Form-Left {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+@media (max-width: 575px) {
+  .P2P-drpDwn-Container {
+    flex-direction: column;
+    align-items: normal;
+  }
+  .P2P-Search-Input-Container {
+    flex-direction: column;
+    align-items: normal;
+  }
+  .P2P-Nav-List > li {
+    font-size: 9px;
+  }
+  .P2P-Sub-Nav-Btn-Box {
+    display: flex;
+  }
+  .P2P-Sub-Nav-Btn-Box > button {
+    padding: 3px 11px;
+    display: inline-block;
+    font-size: 9px;
+    width: 39px;
+  }
+  .P2P-Nav-List {
+    height: 38px;
+    gap: 10px;
+  }
+  .P2P-drpDwn-lefT {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+  }
+}
+
+@media (min-width: 576px) and (max-width: 767px) {
+  .P2P-drpDwn-Container {
+    flex-direction: column;
+    align-items: normal;
+  }
+  .P2P-Search-Input-Container {
+    flex-direction: column;
+    align-items: normal;
+  }
+  .P2P-Nav-List > li {
+    font-size: 9px;
+  }
+  .P2P-Sub-Nav-Btn-Box {
+    display: flex;
+  }
+  .P2P-Sub-Nav-Btn-Box > button {
+    padding: 3px 11px;
+    display: inline-block;
+    font-size: 9px;
+    width: 39px;
+  }
+  .P2P-Nav-List {
+    height: 38px;
+    gap: 10px;
+  }
+  .P2P-drpDwn-lefT {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .P2P-drpDwn-Container {
+    flex-direction: column;
+    align-items: normal;
+  }
+  .P2P-Search-Input-Container {
+    flex-direction: column;
+    align-items: normal;
+  }
 }

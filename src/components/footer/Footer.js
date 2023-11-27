@@ -58,8 +58,8 @@ export const Footer = () => {
             </div>
             <nav>
               <ul className="flex-column footer-ul-gap">
-                <h3>About eternalus</h3>
-                {FOOTER_NAVIGATION[0].about.map((item, ind) => {
+                <h3>Features</h3>
+                {FOOTER_NAVIGATION[0].feature.map((item, ind) => {
                   return (
                     <li>
                       <Link to={item.url} key={ind}>
@@ -69,21 +69,11 @@ export const Footer = () => {
                   );
                 })}
               </ul>
+            </nav>
+            <nav>
               <ul className="flex-column footer-ul-gap">
-                <h3>Product</h3>
-                {FOOTER_NAVIGATION[1].product.map((item, ind) => {
-                  return (
-                    <li>
-                      <Link to={item.url} key={ind}>
-                        {item.label}
-                      </Link>
-                    </li>
-                  );
-                })}
-              </ul>
-              <ul className="flex-column footer-ul-gap">
-                <h3>Buy Crypto</h3>
-                {FOOTER_NAVIGATION[2].crypto.map((item, ind) => {
+                <h3>About</h3>
+                {FOOTER_NAVIGATION[1].about.map((item, ind) => {
                   return (
                     <li>
                       <Link to={item.url} key={ind}>

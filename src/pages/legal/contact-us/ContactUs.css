@@ -1,3 +1,41 @@
+.Contact-Us-Container {
+  background-color: #141416;
+}
 .Contact-Us-Form-Container {
-    width: 631px;
+  max-width: 631px;
+  margin: 0 auto;
+  padding: 55px 115px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.Contact-Us-Form-Container > h1 {
+  color: #fff;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 26px;
+  text-align: center;
+  margin-bottom: 35px;
+}
+
+.Contact-Us-Btn-Container {
+  display: flex;
+  width: 100%;
+  padding: 0 51px;
+  gap: 15px;
+}
+
+.Contact-Us-Message-container > textarea {
+  width: 100%;
+  border-radius: 15px;
+  border: 1px solid rgba(79, 85, 104, 0.63);
+  background: transparent;
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 26px;
+  padding: 12px 15px;
 }

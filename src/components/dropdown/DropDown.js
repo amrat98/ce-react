@@ -1,9 +1,8 @@
 import { useState } from "react";
 import "./DropDown.css";
-export const DropDown = ({ option, title }) => {
+export const DropDown = ({ option, title, handle }) => {
   const [label, setLabel] = useState({ value: "Select Coin", bool: false });
   const [isOpen, setIsopen] = useState(false);
-  console.log(label, "Label");
   return (
     <div className="Cmn-Dropdown-Container">
       <h3>{title}</h3>
@@ -29,6 +28,7 @@ export const DropDown = ({ option, title }) => {
                 key={index}
                 onClick={() => {
                   setLabel(item);
+                  handle(item.value);
                   setIsopen(!isOpen);
                 }}
               >

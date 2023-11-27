@@ -2,7 +2,7 @@ import "./Kyc.css";
 export const Kyc = () => {
   return (
     <>
-      <table>
+      <table className="Kyc-Table">
         <thead>
           <tr>
             <th>DOCUMENT NAME</th>
@@ -13,7 +13,7 @@ export const Kyc = () => {
             <th>STATUS</th>
           </tr>
         </thead>
-        <tbody>
+        <tbody className="Kyc-Table-Body">
           <tr>
             <td>PAN</td>
             <td>549855284022</td>

@@ -1,0 +1,52 @@
+.MarketCard-Container {
+  min-width: 305px;
+  min-height: 167px;
+  padding: 20px 14px;
+  background: #141416;
+  border-radius: 10px;
+}
+
+.MarketCard-Container:hover {
+  background: #22252e;
+}
+
+.MarketCard-Label {
+  color: #78819f;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 44px;
+}
+
+.MarketCard-Content-Container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.MarketCard-Content-Rwo {
+  display: flex;
+  justify-content: space-between;
+}
+
+.MarketCard-Content-Rwo > td {
+  color: #fff;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.MarketCard-Content-Rwo > :nth-child(1) {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+}
+
+.td-Red {
+  color: #d33534;
+}
+
+.td-Green {
+  color: #26a17b;
+}

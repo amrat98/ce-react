@@ -40,14 +40,13 @@
 .Header1-Main-Container {
   display: flex;
   align-items: center;
-  gap: 134px;
   justify-content: space-between;
   height: 89px;
 }
 
 .Header-Nav-Container > nav > ul {
   display: flex;
-  gap: 12px;
+  gap: 39.52px;
 }
 .Header-Nav-Container {
   display: flex;
