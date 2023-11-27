@@ -1,0 +1,64 @@
+.Input-Box {
+  display: flex;
+  flex-direction: column;
+  gap: 11.34px;
+  width: 100%;
+}
+
+.Input-Box > label {
+  color: #fff;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.Input-Box > div {
+  border-radius: 50px;
+  border: 1px solid rgba(79, 85, 104, 0.63);
+  height: 50px;
+  width: 100%;
+  background: #141416;
+
+  display: flex;
+  align-items: center;
+  padding-left: 21.14px;
+  padding-right: 21.14px;
+}
+.Input-Box > div > input {
+  width: 100%;
+  background-color: transparent;
+  outline: none;
+  border: none;
+  color: #fff;
+}
+.Input-Box > div > input::placeholder {
+  color: #4f5568;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.InputBoxWithIcons-Container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-right: 21.14px;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+  color: rgba(0, 0, 0, 0);
+  display: block;
+  background: url("/public/assets/icons/calendar.svg") no-repeat;
+  width: 16.503px;
+  height: 11.4px;
+}
+
+@media (max-width: 767px) {
+  .Input-Box > label {
+    font-size: 12px;
+  }
+  .Input-Box > div > input::placeholder {
+    font-size: 10px;
+  }
+}

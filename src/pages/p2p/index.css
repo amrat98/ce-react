@@ -1,0 +1,607 @@
+.P2P-Container {
+  background: #18191d;
+  padding: 54px 0px;
+}
+.P2P-About-Container {
+  text-align: center;
+  padding-bottom: 33px;
+}
+
+.P2P-About-Container > h1 {
+  color: #fff;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.P2P-About-Container > p {
+  color: #78819f;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin-top: 11px;
+}
+.P2P-Nav-Container {
+  background: #22252e;
+}
+.P2P-Nav-List {
+  display: flex;
+  align-items: center;
+  height: 60px;
+  gap: 24px;
+}
+
+.P2P-Nav-List > li {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 15px;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  cursor: pointer;
+}
+
+.P2P-Nav-Active {
+  border-bottom: 5px solid transparent;
+  border-right: none;
+  border-top: none;
+  border-left: none;
+  border-image: linear-gradient(
+    93deg,
+    #aa56ff -20.75%,
+    #bc63ff 11.84%,
+    #6200c6 53.76%,
+    #3e007d 102.96%
+  );
+  border-image-slice: 1;
+  color: #fff;
+}
+
+.P2P-Nav-Disable {
+  border: none;
+  color: #78819f;
+}
+
+.PaymentMethod-Container {
+  padding: 40px 35px;
+}
+
+.PaymentMethod-Container > h3 {
+  color: #fff;
+  text-align: left;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 150%;
+  margin-bottom: 17px;
+}
+
+.PaymentMethod-Container > p {
+  color: #78819f;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+  margin-bottom: 56px;
+}
+
+.Payment-Method-DrpDwn-Container {
+  max-width: 260px;
+  margin: 0 auto;
+}
+
+.BankTransfer-Form-Container {
+  display: flex;
+  gap: 51px;
+  width: 100%;
+}
+
+.BankTransfer-Form-Container > * {
+  flex: 1;
+}
+
+.BankTransfer-Container > h1 {
+  color: #fff;
+  font-size: 35px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  margin-bottom: 50px;
+}
+
+.BankTransfer-btn-Container {
+  display: flex;
+  justify-content: center;
+  gap: 25.34px;
+  margin-top: 86px;
+}
+
+.P2P-Dashboard-Head-Container {
+  margin-bottom: 46px;
+}
+
+.P2P-Dashboard-Head-Container > h1 {
+  color: #fff;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.P2P-Dashboard-Head-Container > p {
+  color: #78819f;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.P2P-Dashboard-Btn-Container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.P2P-Dashboard-Btn-Left-Box {
+  display: flex;
+  flex: 0.7;
+  gap: 7px;
+}
+
+.P2P-Dashboard-Btn-Right-Box {
+  flex: 0.22;
+}
+
+.P2P-Dashboard-Table-Container > h4 {
+  color: #fff;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  margin: 30px 0px;
+}
+
+.P2P-Dashboard-DrpDwn-Container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 40px;
+}
+
+.P2P-Dashboard-DrpDwn-Left {
+  flex: 0.8;
+  display: flex;
+  gap: 7px;
+}
+
+.P2P-Dashboard-DrpDwn-Right {
+  flex: 0.1;
+}
+
+.PostAdd-Sub-Head {
+  color: #fff;
+  text-align: left;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 150%;
+  margin-bottom: 29px;
+}
+
+.PostAdd-More-Info-Drp-Dwn {
+  display: flex;
+  gap: 21px;
+  margin-bottom: 30px;
+}
+
+.PostAdd-head {
+  color: #fff;
+  text-align: left;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 150%;
+  margin-bottom: 29px;
+}
+
+.PostAdd-More-Info > p {
+  color: #78819f;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+}
+
+.Security-Option-Container > h4 {
+  color: #fff;
+  text-align: left;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 150%;
+}
+.PostAdd-Security-Input {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-top: 22px;
+}
+.PostAdd-Security-Input > label {
+  color: #fff;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.Security-Option-Btn-Container {
+  display: flex;
+  justify-content: center;
+  gap: 21.27px;
+  margin-top: 53px;
+  padding-bottom: 50px;
+}
+
+.PostAdd-top-container {
+  display: flex;
+  width: 100%;
+  align-items: flex-end;
+  gap: 57px;
+  margin-bottom: 21.75px;
+}
+
+.PostAdd-Container {
+  padding: 40px 35px;
+}
+
+.P2P-Dashboard-Container {
+  padding: 40px 35px;
+}
+
+.PostAdd-Container > p {
+  color: #78819f;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+}
+
+.PostAdd-top-container > * {
+  flex: 0.26;
+}
+.PostAdd-top-container > :nth-child(1) {
+  display: flex;
+  gap: 13.86px;
+}
+
+.PostAdd-radio-btn {
+  display: flex;
+  gap: 28px;
+}
+.PostAdd-radio-btn > label {
+  color: #fff;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  display: flex;
+  align-items: center;
+}
+
+.P2P-Dash-User-Container {
+  display: flex;
+  gap: 17px;
+}
+/* 
+.User-Verify-Parent-Containe {
+  displ
+} */
+
+.User-Verify-Cotainer {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin-bottom: 10px;
+}
+
+.User-Verify-Cotainer > :nth-child(2) {
+  display: flex;
+  align-items: center;
+  color: #fff;
+  text-align: center;
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+  line-height: 150%;
+}
+
+.p2p-userName {
+  color: #fff;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.P2P-User-Circle {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #f7931a;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.User-Join-Dtl-Container {
+  display: flex;
+  gap: 23px;
+  margin-bottom: 11px;
+}
+
+.User-Join-Dtl-Container > p {
+  color: #78819f;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.p2p-user-auth {
+  display: flex;
+  gap: 41px;
+}
+
+.p2p-user-auth > p {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.p2p-user-auth > p > span {
+  color: #fff;
+  text-align: center;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+}
+
+.Dash-Box-P2P {
+  min-width: 289px;
+  min-height: 142px;
+  border-radius: 10px;
+  background: #22252e;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+}
+
+.Dash-Box-P2P > p {
+  color: #78819f;
+  text-align: center;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+}
+
+.Dash-Box-P2P-Parent {
+  display: flex;
+  gap: 25px;
+  margin: 55px 0px;
+}
+
+.Dash-Box-P2P > span {
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+  color: #fff;
+}
+
+.Dash-Box-P2P > span::after {
+  content: "Time(S)";
+  color: #78819f;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+  margin-left: 10px;
+}
+
+.Dash-Box-P2P > h3 {
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+  color: #fff;
+}
+
+.Dash-Box-P2P > h3 > :nth-child(1) {
+  color: #24a144;
+}
+
+.Dash-Box-P2P > h3 > :nth-child(2) {
+  color: #cf3044;
+}
+
+.P2P-Sub-Nav-Container {
+  display: flex;
+  align-items: flex-start;
+  gap: 31px;
+  padding-top: 10px;
+}
+
+.P2P-Sub-Nav-Btn-Box {
+  border-radius: 50px;
+  border: 1px solid #393939;
+  padding: 4px;
+  background: #22252e;
+  max-width: 203px;
+  min-height: 40px;
+}
+
+.P2P-Sub-Nav-Btn-Box > button {
+  width: 95px;
+  padding: 6px 0px;
+  text-align: center;
+  border-radius: 50px;
+  color: #fff;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  outline: none;
+  border: none;
+}
+
+.P2P-Sub-Nav-Btn-Select-btn {
+  border-radius: 50px;
+  background: #007f4d;
+}
+
+.P2P-Sub-Nav-Btn-UnSelect-btn {
+  background: transparent;
+}
+
+.drpDwn-Container {
+  display: flex;
+}
+
+.P2P-drpDwn-Container {
+  display: flex;
+  align-items: flex-end;
+  gap: 15px;
+  margin: 42px 0px;
+}
+.P2P-drpDwn-lefT {
+  display: flex;
+  flex: 0.8;
+  gap: 15px;
+}
+
+.P2P-drpDwn-right {
+  display: flex;
+  flex: 0.2;
+  gap: 15px;
+}
+
+.P2P-Search-Input-Container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.P2P-Search-Input-Left {
+  display: flex;
+  flex: 0.65;
+}
+
+.P2P-Search-Input-Left > div {
+  flex-direction: row;
+  align-items: center;
+  height: min-content;
+}
+
+.P2P-Search-Input-Left > :nth-child(2) {
+  margin-left: 16px;
+}
+
+.P2P-Search-Input-Right {
+  flex: 0.25;
+}
+
+.P2P-Search-Table {
+  margin-top: 31px;
+}
+
+.BankTransfer-Form-Left {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+@media (max-width: 575px) {
+  .P2P-drpDwn-Container {
+    flex-direction: column;
+    align-items: normal;
+  }
+  .P2P-Search-Input-Container {
+    flex-direction: column;
+    align-items: normal;
+  }
+  .P2P-Nav-List > li {
+    font-size: 9px;
+  }
+  .P2P-Sub-Nav-Btn-Box {
+    display: flex;
+  }
+  .P2P-Sub-Nav-Btn-Box > button {
+    padding: 3px 11px;
+    display: inline-block;
+    font-size: 9px;
+    width: 39px;
+  }
+  .P2P-Nav-List {
+    height: 38px;
+    gap: 10px;
+  }
+  .P2P-drpDwn-lefT {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+  }
+}
+
+@media (min-width: 576px) and (max-width: 767px) {
+  .P2P-drpDwn-Container {
+    flex-direction: column;
+    align-items: normal;
+  }
+  .P2P-Search-Input-Container {
+    flex-direction: column;
+    align-items: normal;
+  }
+  .P2P-Nav-List > li {
+    font-size: 9px;
+  }
+  .P2P-Sub-Nav-Btn-Box {
+    display: flex;
+  }
+  .P2P-Sub-Nav-Btn-Box > button {
+    padding: 3px 11px;
+    display: inline-block;
+    font-size: 9px;
+    width: 39px;
+  }
+  .P2P-Nav-List {
+    height: 38px;
+    gap: 10px;
+  }
+  .P2P-drpDwn-lefT {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .P2P-drpDwn-Container {
+    flex-direction: column;
+    align-items: normal;
+  }
+  .P2P-Search-Input-Container {
+    flex-direction: column;
+    align-items: normal;
+  }
+}

@@ -1,0 +1,250 @@
+.Exchange-Page-Container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.Exchange-Left-Box {
+  max-width: 277px;
+  flex: 1;
+  border-radius: 5px;
+  border: 0.5px solid #2e2b2b;
+  background: #141416;
+}
+
+.Exchange-Left-Nav-Container {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.Exchange-Left-Box {
+  padding: 10px 13px 0px;
+}
+
+.Exchange-Box-Head {
+  color: #fff;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  margin-bottom: 16px;
+}
+
+.Exchange-Left-Box-Nav {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.Exchange-Left-Box-Nav > li {
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  cursor: pointer;
+}
+
+.Exchange-Active {
+  color: #fff;
+}
+.Exchange-InActive {
+  color: #78819f;
+}
+
+.Exchange-Listed-Coins-Box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 0px;
+  border-bottom: 1px solid #363636;
+}
+.Exchange-Listed-Coins-Box > :nth-child(1) {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.Exchange-Listed-Coins-Box > :nth-child(1) > :nth-child(3) {
+  color: #fff;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.Exchange-Listed-Coins-Box > :nth-child(1) > :nth-child(4) {
+  color: #78819f;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.Exchange-Listed-Coins-Box > :nth-child(2) > * {
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  display: block;
+  text-align: right;
+}
+.Exchange-Listed-Coins-Box > :nth-child(2) > :nth-child(1) {
+  color: #fff;
+}
+
+.Exchange-Listed-Coins-Box > :nth-child(2) > :nth-child(2) {
+  color: #ef5656;
+}
+
+.Exchange-Right-Box {
+  flex: 1;
+  max-width: 321px;
+  padding: 10px 0px 0px;
+  border: 0.5px solid #2e2b2b;
+  background: #141416;
+}
+.Exchange-Right-Head-Box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 10px;
+  border-bottom: 0.5px solid #2e2b2b;
+}
+
+.Exchange-Right-Head-Box > h1 {
+  margin: 0;
+}
+
+.Order_Book_Container {
+  display: flex;
+  gap: 14px;
+}
+
+.Exchange-Right-Table-Container {
+  padding-bottom: 12px;
+}
+
+.Exchange-Right-Table-Container > table > thead > tr > th {
+  color: #78819f;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.Exchange-Right-Table-Container > table > thead {
+  height: 40px;
+}
+
+.Exchange-Right-Table-Container > table {
+  width: 100%;
+  border-spacing: 10px;
+  background-color: transparent;
+}
+
+.Exchange-Right-Table-Container > table > tbody > tr > td {
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.Exchange-Right-Table-Container > table > tbody > tr > :nth-child(1) {
+  color: #ef5656;
+}
+.Exchange-Right-Table-Container > table > tbody > tr > :nth-child(2) {
+  color: #fff;
+}
+.Exchange-Right-Table-Container > table > tbody > tr > :nth-child(3) {
+  color: #78819f;
+}
+
+.Exchange-Righ_btm_Ul {
+  display: flex;
+}
+
+.Exchange-Righ_btm_Ul > li {
+  padding: 13px 14px;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  cursor: pointer;
+}
+
+.Exchange-Righ_btm_Select {
+  color: #fff;
+  border-top: 5px solid transparent;
+  border-right: none;
+  border-bottom: none;
+  border-left: none;
+  border-image: linear-gradient(
+    93deg,
+    #aa56ff -20.75%,
+    #bc63ff 11.84%,
+    #6200c6 53.76%,
+    #3e007d 102.96%
+  );
+  border-image-slice: 1;
+}
+
+.Exchange-Righ_btm_UnSelect {
+  color: #78819f;
+  border-top: 5px solid transparent;
+  border-right: none;
+  border-bottom: none;
+  border-left: none;
+  border-image: #000;
+  border-image-slice: 1;
+}
+
+.Exchange-Btm-Table-Nav-Btn > ul {
+  display: flex;
+}
+
+.Exchange-Btm-Table-Nav-Btn > ul > li {
+  padding: 10px 20px;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  cursor: pointer;
+}
+
+.Exchange-Btm-Table-Nav-Btn-Active {
+  color: #fff;
+  background: linear-gradient(
+    93deg,
+    #aa56ff -20.75%,
+    #bc63ff 11.84%,
+    #6200c6 53.76%,
+    #3e007d 102.96%
+  );
+}
+
+.Exchange-Btm-Table-Nav-Btn-InActive {
+  color: #78819f;
+  background: transparent;
+}
+
+.Exchange-Btm-Table-Container {
+  margin-top: 63px;
+}
+.Exchange-Btm-Table-Container > table {
+  width: 100%;
+}
+.Exchange-Btm-Table-Container > table > thead > tr > th {
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.Exchange-Btm-Table-Container > table > tbody > tr > td {
+  color: #fff;
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}

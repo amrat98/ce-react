@@ -1,0 +1,171 @@
+.Profile-Main-Container {
+  display: flex;
+  flex-direction: column;
+  gap: 52px;
+}
+
+.Profile-form-title {
+  color: #fff;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  margin-bottom: 20px;
+}
+.Profile-Container {
+  display: flex;
+  gap: 57px;
+}
+
+.Profile-Title-Container {
+  display: flex;
+  justify-content: space-between;
+  min-height: 90px;
+  padding: 0px 40px;
+  align-items: center;
+  background-color: #141416;
+  border-bottom: 0.5px solid #23252a;
+}
+
+.Profile-Title-Container > span {
+  color: #fff;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.Profile-Info-Container {
+  display: flex;
+  gap: 38px;
+  padding-left: 35px;
+  padding-right: 35px;
+  padding-bottom: 50px;
+}
+
+.Profile-Pic-Box {
+  width: 170px;
+  height: 170px;
+  border-radius: 50%;
+  position: relative;
+}
+
+.CameraImg {
+  position: absolute;
+  bottom: 5%;
+  right: 10%;
+}
+
+.Profile-Common-Form-Container {
+  display: flex;
+  gap: 18px;
+  flex-direction: column;
+  width: 100%;
+}
+
+.Profile-Common-Form-Container > .form-box {
+  width: 100%;
+  display: flex;
+  gap: 20px;
+}
+
+.Profile-Common-Form-Container > .form-box > * {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.Profile-Button-Container {
+  display: flex;
+  gap: 14.15px;
+  margin-top: 28px;
+}
+
+@media (min-width: 280px) and (max-width: 575px) {
+  .Profile-Container {
+    flex-direction: column;
+  }
+  .Chip-Container > .Right-Box {
+    flex-wrap: wrap;
+    justify-content: end;
+  }
+  .Profile-Info-Container {
+    flex-direction: column;
+  }
+  .Profile-Info-Container > :nth-child(1) {
+    display: flex;
+    justify-content: center;
+  }
+  .Kyc-Table > thead > tr > th {
+    font-size: 9px;
+  }
+  .Kyc-Table-Body > tr > td {
+    font-size: 7px;
+    width: 60px;
+  }
+  .Kyc-Nav-List > li > span {
+    font-size: 9px;
+  }
+  .Profile-Title-Container > span {
+    font-size: 16px;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 767px) {
+  .Profile-Container {
+    flex-direction: column;
+  }
+  .Chip-Container > .Right-Box {
+    flex-wrap: wrap;
+    justify-content: end;
+  }
+  .Profile-Info-Container {
+    flex-direction: column;
+  }
+  .Profile-Info-Container > :nth-child(1) {
+    display: flex;
+    justify-content: center;
+  }
+  table {
+    border-spacing: 8px;
+  }
+
+  .Kyc-Table > thead > tr > th {
+    font-size: 9px;
+  }
+  .Kyc-Table-Body > tr > td {
+    font-size: 7px;
+  }
+  .Kyc-Nav-List > li > span {
+    font-size: 9px;
+  }
+  .Profile-Title-Container > span {
+    font-size: 16px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .Profile-Container {
+    flex-direction: column;
+  }
+  .Chip-Container > .Right-Box {
+    flex-wrap: wrap;
+    justify-content: end;
+  }
+  table {
+    border-spacing: 8px;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+  .Profile-Container {
+    flex-direction: column;
+  }
+}
+
+@media (min-width: 1200px) and (max-width: 1399px) {
+}
+
+@media (min-width: 1400px) {
+}

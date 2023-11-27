@@ -1,0 +1,12 @@
+.cmn-table {
+  width: 100%;
+}
+
+@media (max-width: 767px) {
+  .cmn-table > thead > tr > th {
+    font-size: 9px;
+  }
+  .cmn-table {
+    border-spacing: 10px;
+  }
+}

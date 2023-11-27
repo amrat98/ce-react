@@ -2,6 +2,7 @@ import { Footer } from "../../components/footer/Footer";
 import { CryptoStatsTable } from "../../components/table/CryptoTable";
 import { Header } from "../../components/header/Header";
 import "./home.css";
+import { Link } from "react-router-dom";
 
 export const HomePage = () => {
   const data = [
@@ -65,12 +66,28 @@ export const HomePage = () => {
                     Sign up and trade to ear up to{" "}
                     <span className="linear-gradient">241 USDT</span>
                   </p>
-                  <button>Sign Up</button>
+                  <button>
+                    <Link to={"/create-account"} style={{ color: "#fff" }}>
+                      Sign Up
+                    </Link>
+                  </button>
                 </div>
                 <img src="/assets/images/Tordek.webp" alt="TORDEk" />
               </div>
             </div>
           </div>
+        </section>
+        {/* <section>
+          <div className="homepage-cards-container cmn-padding">
+            <div className="homepage-cards-main-container">
+              <img src="/assets/images/cards.webp" alt="img" />
+              <img src="/assets/images/cards.webp" alt="img" />
+              <img src="/assets/images/cards.webp" alt="img" />
+            </div>
+          </div>
+        </section> */}
+        <section>
+          <CryptoStatsTable data={data} />
         </section>
         <section>
           <div className="Count-Container">
@@ -96,7 +113,7 @@ export const HomePage = () => {
           </div>
         </section>
         <section>
-          <div className="Core-Product-Container">
+          <div className="Core-Product-Container cmn-padding">
             <div className="Core-Product-Head">
               <h1 className="heading">Our Core Products</h1>
               <p>A wide variety of trading tools to choose from</p>
@@ -134,7 +151,7 @@ export const HomePage = () => {
           </div>
         </section>
         <section>
-          <div className="Core-Product-Container">
+          <div className="Core-Product-Container cmn-padding">
             <div className="Core-Product-Head">
               <h1 className="heading">Our Diversified</h1>
               <p>Explore unlimited possibilities with our diverse services</p>
@@ -165,7 +182,7 @@ export const HomePage = () => {
                   </div>
                 </div>
                 <div className="Core-Product-Right-Box">
-                  <img src="/assets/images/Product-img.webp" alt="" />
+                  <img src="/assets/images/App-Mob-View.webp" alt="" />
                 </div>
               </div>
             </div>
@@ -205,9 +222,6 @@ export const HomePage = () => {
           </div>
         </section>
         <Footer />
-        <section>
-          <CryptoStatsTable data={data} />
-        </section>
       </div>
     </>
   );

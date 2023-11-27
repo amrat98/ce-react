@@ -4,7 +4,7 @@ export const Header = () => {
   return (
     <>
       <header className="header-bg">
-        <div className="Header1-Container">
+        <div className="container">
           <div>
             <div className="Header1-Main-Container">
               <div className="logo-container">
@@ -15,65 +15,34 @@ export const Header = () => {
                 <nav>
                   <ul>
                     <li>
-                      <Link to={"/"}>
-                        Buy Crypto
-                        <img src="/assets/icons/menu-down.svg" alt="" />
-                      </Link>
+                      <Link to={"/"}>Buy Crypto</Link>
                     </li>
                     <li>
-                      <Link to={"/"}>
-                        Market
-                        <img src="/assets/icons/menu-down.svg" alt="" />
-                      </Link>
+                      <Link to={"/market"}>Market</Link>
                     </li>
                     <li>
-                      <Link to={"/"}>
-                        Trade
-                        <img src="/assets/icons/menu-down.svg" alt="" />
-                      </Link>
+                      <Link to={"/"}>Trade</Link>
                     </li>
                     <li>
-                      <Link to={"/"}>
-                        Derivatives
-                        <img src="/assets/icons/menu-down.svg" alt="" />
-                      </Link>
+                      <Link to={"/"}>NFT</Link>
                     </li>
                     <li>
-                      <Link to={"/"}>
-                        Earn
-                        <img src="/assets/icons/menu-down.svg" alt="" />
-                      </Link>
-                    </li>
-                    <li>
-                      <Link to={"/"}>
-                        Finance
-                        <img src="/assets/icons/menu-down.svg" alt="" />
-                      </Link>
-                    </li>
-                    <li>
-                      <Link to={"/"}>
-                        Content
-                        <img src="/assets/icons/menu-down.svg" alt="" />
-                      </Link>
-                    </li>
-                    <li>
-                      <Link to={"/"}>
-                        Activity
-                        <img src="/assets/icons/menu-down.svg" alt="" />
-                      </Link>
-                    </li>
-                    <li>
-                      <Link to={"/"}>
-                        Web 3.0
-                        <img src="/assets/icons/menu-down.svg" alt="" />
-                      </Link>
+                      <Link to={"/p2p"}>P2P</Link>
                     </li>
                   </ul>
                 </nav>
-                <div className="header-btn">
-                  <button>Login</button>
-                  <button>Sign Up</button>
-                </div>
+              </div>
+              <div className="header-btn">
+                <button>
+                  <Link to={"/login"} style={{ color: "#fff" }}>
+                    Login
+                  </Link>
+                </button>
+                <button>
+                  <Link to={"/create-account"} style={{ color: "#fff" }}>
+                    Sign Up
+                  </Link>
+                </button>
               </div>
             </div>
           </div>

@@ -1,0 +1,141 @@
+table {
+  background-color: #24252b;
+  border-spacing: 18px;
+  border-collapse: separate;
+}
+thead {
+}
+table > body {
+  background-color: #18191d;
+}
+thead > tr > th {
+  color: #78819f;
+  text-align: center;
+  font-size: 15.455px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+tbody > tr > td {
+  color: #fff;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-align: center;
+}
+
+.clip-path {
+  -webkit-clip-path: polygon(77% 0, 100% 19%, 77% 37%, 0 37%, 0 18%, 0% 0%);
+  clip-path: polygon(
+    77% 0,
+    100% 19%,
+    77% 37%,
+    0 37%,
+    0 18%,
+    0% 0%
+  ); /* Add your desired background color */
+  height: 100px;
+  max-width: 291px;
+  width: 100%;
+  color: #fff;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  vertical-align: middle;
+  background: linear-gradient(
+    93deg,
+    #aa56ff -20.75%,
+    #bc63ff 11.84%,
+    #6200c6 53.76%,
+    #3e007d 102.96%
+  );
+}
+
+.nav-btn {
+  width: 291px;
+  height: 41px;
+  background: linear-gradient(
+    93deg,
+    #aa56ff -20.75%,
+    #bc63ff 11.84%,
+    #6200c6 53.76%,
+    #3e007d 102.96%
+  );
+}
+
+.pentagon {
+  width: 100px; /* Adjust the size as needed */
+  height: 100px; /* Adjust the size as needed */
+  background-color: #3498db; /* Adjust the color as needed */
+  clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%);
+}
+
+.Kyc-Container {
+    padding: 30px 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 42.32px;
+}
+
+.Kyc-Nav-List {
+  display: flex;
+  align-items: center;
+}
+.Kyc-Nav-List > li {
+  position: relative;
+  text-align: center;
+  height: 41px;
+  cursor: pointer;
+  flex: 1;
+}
+.Kyc-Nav-List > li > img {
+  min-height: 41px;
+  width: 100%;
+}
+.Kyc-Nav-List > li > span {
+  color: #fff;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  position: absolute;
+  display: inline-block;
+  right: 50%;
+  top: 50%;
+  text-wrap: nowrap;
+  transform: translate(50%, -50%);
+}
+
+.Kyc-Form-Container {
+  display: flex;
+  gap: 51px;
+  margin-bottom: 50px;
+}
+.Kyc-Form-Container > * {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.Document-DropDown-Container > select {
+  border-radius: 30px 30px 30px 30px;
+  background-color: rgba(79, 85, 104, 0.63);
+  border: 1px solid;
+}
+
+
+.Document-Upload-Container {
+    display: flex;
+    gap: 62px;
+}
+.Document-Upload-Container > * {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+}
+

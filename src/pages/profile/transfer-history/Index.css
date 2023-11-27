@@ -1,0 +1,28 @@
+.Transfer-History-Parent {
+    padding: 80px 0px;
+    background: #060203;
+}
+.Transfer-History-Btn-Container {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 72px;
+}
+.Transfer-History-Table {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 90px;
+  background: #141416;
+  padding-left: 30px;
+  padding-right: 30px;
+  border-bottom: #23252A;
+}
+
+.Transfer-History-Table > span {
+  color: #fff;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}

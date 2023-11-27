@@ -1,0 +1,174 @@
+.Market_Parent_Container {
+  background-color: #060203;
+  padding: 50px 0px;
+}
+.Market-Card-Top-Container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px 0px;
+  justify-content: space-between;
+}
+
+.Market-Nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 84px;
+}
+
+.Market-Nav > ul {
+  display: flex;
+  gap: 18px;
+}
+.Market-Nav > ul > li {
+  min-height: 35px;
+  text-align: center;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  display: flex;
+  align-items: center;
+  padding: 0 25px;
+  cursor: pointer;
+}
+
+.active-market-nav {
+  background: #202435;
+  color: #fff;
+  border-radius: 100px;
+}
+.inactive-market-nav {
+  color: #78819f;
+}
+
+@media (max-width: 767px) {
+  .Dynamic-Table-Head > tr > th {
+    font-size: 9px;
+  }
+  .Dynamic-Table-Body > tr > td {
+    font-size: 7px;
+  }
+  .Dynamic-Table-Container > table > thead > tr > th {
+    font-size: 9px;
+  }
+  .Dynamic-Table-Container > table > tbody > tr > td {
+    font-size: 7px;
+  }
+  .market-table-btn {
+    padding: 0px 11px 0px 12px;
+    font-size: 7px;
+  }
+  .MarketCard-Content-Rwo {
+    align-items: center;
+  }
+  .MarketCard-Content-Rwo > :nth-child(1) {
+    font-weight: 600;
+  }
+  .MarketCard-Content-Rwo > td {
+    font-size: 7px;
+  }
+  .MarketCard-Container {
+    padding: 11px 14px;
+    min-width: auto;
+    min-height: 89px;
+  }
+  .Market-Card-Top-Container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    grid-gap: 20px;
+  }
+  .MarketCard-Content-Rwo > :nth-child(1) > img {
+    width: 12px;
+    height: 12px;
+  }
+  .MarketCard-Label {
+    line-height: normal;
+    font-size: 12px;
+    margin-bottom: 5px;
+  }
+  .Market-Nav {
+    height: auto;
+    flex-direction: column;
+    margin-bottom: 20px;
+    gap: 15px;
+    align-items: flex-start;
+  }
+  .Market-Nav > ul {
+    flex-wrap: wrap;
+    gap: 5px;
+  }
+  .Market-Nav > ul > li {
+    font-size: 9px;
+    padding: 6px 10px;
+  }
+  .SearchBar-Container {
+    height: 24.888px;
+    max-width: 94px;
+    border-radius: 100px;
+    border: 1px solid #202435;
+    align-self: flex-end;
+  }
+  .SearchBar-Container > img {
+    height: 10px;
+    width: 10px;
+  }
+  .SearchBar-Container > input {
+    height: 10px;
+  }
+  .SearchBar-Container > input::placeholder {
+    font-size: 7px;
+    color: #78819f;
+    line-height: 24px;
+  }
+  .Market-Nav-2 {
+    align-items: center;
+  }
+  .Dynamic-Table-Container {
+    overflow-x: scroll;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .Market-Nav > ul {
+    flex-wrap: wrap;
+  }
+  .Market-Nav {
+    height: auto;
+    margin-bottom: 15px;
+  }
+  .caret-icon-box {
+    margin-left: 4px;
+  }
+
+  .Dynamic-Table-Container > table > thead > tr > th {
+    font-size: 12.455px;
+  }
+  .Dynamic-Table-Container > table > tbody > tr > td {
+    font-size: 12px;
+  }
+  .market-table-btn-td {
+    gap: 8px;
+  }
+  .market-table-btn-td > button {
+    padding: 0 10px;
+    font-size: 8px;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1240px) {
+  .Market-Nav > ul {
+    flex-wrap: wrap;
+  }
+  .Market-Nav {
+    height: auto;
+  }
+
+  .caret-icon-box {
+    margin-left: 4px;
+  }
+
+  .Dynamic-Table-Container > table > thead > tr > th {
+    font-size: 12.455px;
+  }
+}
