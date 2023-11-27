@@ -20,12 +20,8 @@
   cursor: pointer;
 }
 
-.market-table-btn-td {
-  display: flex;
-  gap: 15px;
-}
 
-.market-table-btn-td > button {
+.market-table-btn{
   border-radius: 100px;
   border: 1px solid #aa56ff;
   padding: 0 26px;
@@ -41,7 +37,7 @@
   background: transparent;
 }
 
-.market-table-btn-td > button:hover {
+.market-table-btn:hover {
   background: linear-gradient(93deg, #AA56FF -20.75%, #BC63FF 11.84%, #6200C6 53.76%, #3E007D 102.96%);
   border: 1px solid #000;  
 }

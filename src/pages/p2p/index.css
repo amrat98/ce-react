@@ -1,8 +1,10 @@
 .P2P-Container {
   background: #18191d;
+  padding: 54px 0px;
 }
 .P2P-About-Container {
   text-align: center;
+  padding-bottom: 33px;
 }
 
 .P2P-About-Container > h1 {
@@ -250,6 +252,14 @@
   align-items: flex-end;
   gap: 57px;
   margin-bottom: 21.75px;
+}
+
+.PostAdd-Container {
+  padding: 40px 35px;
+}
+
+.P2P-Dashboard-Container {
+  padding: 40px 35px;
 }
 
 .PostAdd-Container > p {
@@ -520,3 +530,10 @@
 .P2P-Search-Table {
   margin-top: 31px;
 }
+
+.BankTransfer-Form-Left {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+

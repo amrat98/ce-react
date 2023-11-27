@@ -7,7 +7,17 @@ export const Security = () => {
   };
   return (
     <div className="Security-Container">
-      <Chip icon={"Google-Auth"}>
+      <Chip icon={"Google-Auth"} title={"Google Authentication"}>
+        <div>
+          <p>
+            Google Auth : <span>Disable</span>
+          </p>
+          <Button ClASSS={"green"} style={style}>
+            Enter Google Auth
+          </Button>
+        </div>
+      </Chip>
+      <Chip icon={"mob-auth-otp"} title={"SMS Authentication"}>
         <div>
           <p>
             SMS Auth : <span>Disable</span>
@@ -17,47 +27,48 @@ export const Security = () => {
           </Button>
         </div>
       </Chip>
-      <Chip icon={"mob-auth-otp"}>
+      <Chip icon={"mob-auth-otp"} title={"Email Authentication"}>
         <div>
           <p>
-            SMS Auth : <span>Disable</span>
+            Email Auth : <span>Disable</span>
           </p>
           <Button ClASSS={"green"} style={style}>
             Enter Google Auth
           </Button>
         </div>
       </Chip>
-      <Chip icon={"mob-auth-otp"}>
-        <div>
-          <p>
-            SMS Auth : <span>Disable</span>
-          </p>
-          <Button ClASSS={"green"} style={style}>
-            Enter Google Auth
-          </Button>
+      <div className="Chip-Container">
+        <div className="Left-Box">
+          <img src={`/assets/icons/Anti-Phising.svg`} alt={"Anti-Phising"} />
+          <div>
+            <h3 className="auth-head">Anti-Phishing Code</h3>
+            <p>Used for withdraw & security modification</p>
+            <div className="Anti-Phishing-Input-Container">
+              <Input
+                label={"Anti-Phishing Code :"}
+                placeholder={"Fierex"}
+                name={"Fierex"}
+              />
+            </div>
+          </div>
         </div>
-      </Chip>
-      <Chip icon={"Anti-Phising"}>
-        <div>
-          <p>Current Code :</p>
-          <Button ClASSS={"black"} style={style}>
-            Disable
-          </Button>
+        <div className="Right-Box">
+          <div>
+            <p>Current Code :</p>
+            <Button ClASSS={"black"} style={style}>
+              Disable
+            </Button>
+          </div>
+          <div>
+            <p>
+              Email Auth : <span>Disable</span>
+            </p>
+            <Button ClASSS={"green"} style={style}>
+              Enter Google Auth
+            </Button>
+          </div>
         </div>
-        <div>
-          <p>
-            SMS Auth : <span>Disable</span>
-          </p>
-          <Button ClASSS={"green"} style={style}>
-            Enter Google Auth
-          </Button>
-        </div>
-      </Chip>
-      <Input
-        label={"Anti-Phishing Code :"}
-        placeholder={"Fierex"}
-        name={"Fierex"}
-      />
+      </div>
       <div className="Btm-Container">
         <h3 className="auth-head">Account Activity</h3>
         <Button ClASSS={"blue"} style={{ maxWidth: "197px" }}>

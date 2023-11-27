@@ -1,7 +1,7 @@
 .Security-Container {
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
 }
 .Chip-Container {
   display: flex;
@@ -60,17 +60,22 @@
 }
 
 .Btm-Container {
-    display: flex;
-    align-items: center;
-    height: 124px;
-    justify-content: space-between;
-    padding-left: 39px;
-    padding-right: 15px;
+  display: flex;
+  align-items: center;
+  height: 124px;
+  justify-content: space-between;
+  padding-left: 39px;
+  padding-right: 15px;
 }
 
 .btn-container {
-    display: flex;
-    gap: 15.4px;
-    justify-content: center;
-    margin: 52px 0px;
+  display: flex;
+  gap: 15.4px;
+  justify-content: center;
+  margin: 52px 0px;
+}
+
+
+.Anti-Phishing-Input-Container {
+  margin-top: 17px;
 }

@@ -13,7 +13,7 @@ export const Notification = () => {
         <div className="container">
           <Template>
             <ProfileTitle>
-              <span>Login history </span>
+              <span>Notification</span>
               <Button ClASSS={"black"} style={{maxWidth: "184.286px"}}>Clear Notification</Button>
             </ProfileTitle>
             <NoData label={"No record Found!"} />

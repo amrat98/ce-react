@@ -118,7 +118,7 @@
 .Count-Main-Container {
   display: flex;
   align-items: center;
-  gap: 100px;
+  justify-content: space-between;
 }
 .Count-Main-Container > div {
   text-align: center;

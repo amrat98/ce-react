@@ -80,3 +80,79 @@
   gap: 14.15px;
   margin-top: 28px;
 }
+
+@media (min-width: 280px) and (max-width: 575px) {
+  .Profile-Container {
+    flex-direction: column;
+  }
+  .Chip-Container > .Right-Box {
+    flex-wrap: wrap;
+    justify-content: end;
+  }
+  .Profile-Info-Container {
+    flex-direction: column;
+  }
+  .Profile-Info-Container > :nth-child(1){
+    display: flex;
+    justify-content: center;
+  }
+  .Kyc-Table > thead > tr > th {
+    font-size: 9px;
+  }
+  .Kyc-Table-Body > tr > td {
+    font-size: 7px;
+    width: 60px;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 767px) {
+  .Profile-Container {
+    flex-direction: column;
+  }
+  .Chip-Container > .Right-Box {
+    flex-wrap: wrap;
+    justify-content: end;
+  }
+  .Profile-Info-Container {
+    flex-direction: column;
+  }
+  .Profile-Info-Container > :nth-child(1){
+    display: flex;
+    justify-content: center;
+  }
+  table {
+    border-spacing: 8px;
+  }
+
+  .Kyc-Table > thead > tr > th {
+    font-size: 9px;
+  }
+  .Kyc-Table-Body > tr > td {
+    font-size: 7px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .Profile-Container {
+    flex-direction: column;
+  }
+  .Chip-Container > .Right-Box {
+    flex-wrap: wrap;
+    justify-content: end;
+  }
+  table {
+    border-spacing: 8px;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+  .Profile-Container {
+    flex-direction: column;
+  }
+}
+
+@media (min-width: 1200px) and (max-width: 1399px) {
+}
+
+@media (min-width: 1400px) {
+}

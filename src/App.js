@@ -17,6 +17,7 @@ import { ContactUs } from "./pages/legal/contact-us/ContactUs";
 import { Market } from "./pages/market/Market";
 import { Exchange } from "./pages/exchange/Exchange";
 import { P2P } from "./pages/p2p/P2P";
+import { Wallet } from "./pages/wallet/Wallet";
 import "./App.css";
 function App() {
   return (
@@ -30,16 +31,17 @@ function App() {
           <Route path="/create-account" element={<CreateAccount />}></Route>
           <Route path="/term-condition" element={<TermCondition />}></Route>
           <Route path="/about-us" element={<AboutUs />}></Route>
-          <Route path="/private-policy" element={<PrivacyPolicy />}></Route>
+          <Route path="/private-policy" element={<PrivacyPolicy />}/>
           <Route path="/faq" element={<FAQ />}></Route>
           <Route path="/kyc" element={<Kyc />}></Route>
           <Route path="/profile" element={<Profile />}></Route>
           <Route path="/transfer-history" element={<TransferHistory />}></Route>
           <Route path="/login-history" element={<LoginHistory />}></Route>
           <Route path="/notification" element={<Notification />}></Route>
-          <Route path="/test" element={<Market />}></Route>
+          <Route path="/market" element={<Market />} />
           <Route path="/contact-us" element={<ContactUs />}></Route>
-          <Route path="/test1" element={<Exchange/>}></Route>
+          <Route path="/p2p" element={<P2P />} />
+          <Route path="/wallet" element={<Wallet />} />
         </Routes>
       </BrowserRouter>
     </>

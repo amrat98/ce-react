@@ -7,7 +7,7 @@ export const DynamicTable = ({ head }) => {
       id: 1,
       name: "John Doe",
       username: "john_doe",
-      email: "john.doe@example.com",
+      email: "9.949.77M",
       age: 28,
       city: "New York",
     },
@@ -15,7 +15,7 @@ export const DynamicTable = ({ head }) => {
       id: 2,
       name: "Jane Smith",
       username: "jane_smith",
-      email: "jane.smith@example.com",
+      email: "9.949.77M",
       age: 25,
       city: "San Francisco",
     },
@@ -23,7 +23,7 @@ export const DynamicTable = ({ head }) => {
       id: 3,
       name: "Bob Johnson",
       username: "bob_johnson",
-      email: "bob.johnson@example.com",
+      email: "9.949.77M",
       age: 32,
       city: "Los Angeles",
     },
@@ -31,7 +31,7 @@ export const DynamicTable = ({ head }) => {
       id: 4,
       name: "Eva Davis",
       username: "eva_davis",
-      email: "eva.davis@example.com",
+      email: "9.949.77M",
       age: 29,
       city: "Chicago",
     },
@@ -39,7 +39,7 @@ export const DynamicTable = ({ head }) => {
       id: 5,
       name: "Michael Miller",
       username: "michael_miller",
-      email: "michael.miller@example.com",
+      email: "9.949.77M",
       age: 34,
       city: "Houston",
     },
@@ -47,7 +47,7 @@ export const DynamicTable = ({ head }) => {
       id: 6,
       name: "Sophia Wilson",
       username: "sophia_wilson",
-      email: "sophia.wilson@example.com",
+      email: "9.949.77M",
       age: 26,
       city: "Miami",
     },
@@ -55,7 +55,7 @@ export const DynamicTable = ({ head }) => {
       id: 7,
       name: "Daniel Brown",
       username: "daniel_brown",
-      email: "daniel.brown@example.com",
+      email: "9.949.77M",
       age: 31,
       city: "Seattle",
     },
@@ -63,7 +63,7 @@ export const DynamicTable = ({ head }) => {
       id: 8,
       name: "Olivia Taylor",
       username: "olivia_taylor",
-      email: "olivia.taylor@example.com",
+      email: "9.949.77M",
       age: 27,
       city: "Denver",
     },
@@ -71,7 +71,7 @@ export const DynamicTable = ({ head }) => {
       id: 9,
       name: "William Smith",
       username: "william_smith",
-      email: "william.smith@example.com",
+      email: "9.949.77M",
       age: 30,
       city: "Atlanta",
     },
@@ -79,7 +79,7 @@ export const DynamicTable = ({ head }) => {
       id: 10,
       name: "Emma Jones",
       username: "emma_jones",
-      email: "emma.jones@example.com",
+      email: "9.949.77M",
       age: 33,
       city: "Boston",
     },
@@ -87,7 +87,7 @@ export const DynamicTable = ({ head }) => {
       id: 11,
       name: "Christopher Anderson",
       username: "chris_anderson",
-      email: "chris.anderson@example.com",
+      email: "9.949.77M",
       age: 28,
       city: "Dallas",
     },
@@ -95,7 +95,7 @@ export const DynamicTable = ({ head }) => {
       id: 12,
       name: "Isabella Martinez",
       username: "isabella_martinez",
-      email: "isabella.martinez@example.com",
+      email: "9.949.77M",
       age: 26,
       city: "Phoenix",
     },
@@ -103,7 +103,7 @@ export const DynamicTable = ({ head }) => {
       id: 13,
       name: "Joseph Taylor",
       username: "joseph_taylor",
-      email: "joseph.taylor@example.com",
+      email: "9.949.77M",
       age: 31,
       city: "Philadelphia",
     },
@@ -111,7 +111,7 @@ export const DynamicTable = ({ head }) => {
       id: 14,
       name: "Ava Hernandez",
       username: "ava_hernandez",
-      email: "ava.hernandez@example.com",
+      email: "9.949.77M",
       age: 29,
       city: "San Diego",
     },
@@ -119,7 +119,7 @@ export const DynamicTable = ({ head }) => {
       id: 15,
       name: "William Garcia",
       username: "william_garcia",
-      email: "william.garcia@example.com",
+      email: "9.949.77M",
       age: 33,
       city: "Charlotte",
     },
@@ -127,7 +127,7 @@ export const DynamicTable = ({ head }) => {
       id: 16,
       name: "Sofia Martinez",
       username: "sofia_martinez",
-      email: "sofia.martinez@example.com",
+      email: "9.949.77M",
       age: 27,
       city: "San Antonio",
     },
@@ -135,7 +135,7 @@ export const DynamicTable = ({ head }) => {
       id: 17,
       name: "Matthew Clark",
       username: "matthew_clark",
-      email: "matthew.clark@example.com",
+      email: "9.949.77M",
       age: 30,
       city: "Detroit",
     },
@@ -143,7 +143,7 @@ export const DynamicTable = ({ head }) => {
       id: 18,
       name: "Olivia Moore",
       username: "olivia_moore",
-      email: "olivia.moore@example.com",
+      email: "9.949.77M",
       age: 32,
       city: "Minneapolis",
     },
@@ -151,7 +151,7 @@ export const DynamicTable = ({ head }) => {
       id: 19,
       name: "James White",
       username: "james_white",
-      email: "james.white@example.com",
+      email: "9.949.77M",
       age: 28,
       city: "Tampa",
     },
@@ -159,7 +159,7 @@ export const DynamicTable = ({ head }) => {
       id: 20,
       name: "Emma Rodriguez",
       username: "emma_rodriguez",
-      email: "emma.rodriguez@example.com",
+      email: "9.949.77M",
       age: 31,
       city: "Cleveland",
     },
@@ -197,7 +197,7 @@ export const DynamicTable = ({ head }) => {
   };
   return (
     <div className="Dynamic-Table-Container">
-      <table>
+      <table cellSpacing={"0"} cellPadding={"0"}>
         <thead>
           <tr>
             <th>
@@ -291,6 +291,7 @@ export const DynamicTable = ({ head }) => {
               </span>
             </th>
             <th></th>
+            <th></th>
           </tr>
         </thead>
         <tbody>
@@ -301,10 +302,10 @@ export const DynamicTable = ({ head }) => {
               <td>{item.email}</td>
               <td>{item.city}</td>
               <td>
-                <div className="market-table-btn-td">
-                  <button>Info</button>
-                  <button>Trade</button>
-                </div>
+                <button className="market-table-btn">Info</button>
+              </td>
+              <td>
+                <button className="market-table-btn">Trade</button>
               </td>
             </tr>
           ))}

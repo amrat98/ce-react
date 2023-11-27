@@ -6,7 +6,8 @@ footer {
 }
 .footer-container {
   display: flex;
-  gap: 119px;
+  justify-content: center;
+  gap: 200px;
 }
 .footer-container > nav {
   display: flex;
