@@ -119,12 +119,6 @@ export const P2P = () => {
                 <div className="P2P-Search-Input-Left">
                   <DateInput label={"from"} />
                   <DateInput label={"to"} />
-                  <Button
-                    ClASSS={"blue"}
-                    style={{ maxWidth: "128.556px", marginLeft: "19px" }}
-                  >
-                    Search
-                  </Button>
                 </div>
                 <div className="P2P-Search-Input-Right">
                   <Input placeholder={"Search Coin"} />
@@ -139,9 +133,7 @@ export const P2P = () => {
           {selectNav === "Post Your Add" && <PostAdd />}
           {selectNav === "Add Payment Method" && <PaymentMethod />}
           {selectNav === "P2P Dashboard" && <P2PDashBoard />}
-          {/* <BankTransfer />
-          
-          <PostAdd /> */}
+
         </div>
       </div>
       <Footer />

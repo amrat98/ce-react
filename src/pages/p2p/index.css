@@ -533,6 +533,36 @@
   flex-direction: column;
   gap: 20px;
 }
+@media (max-width: 575px) {
+  .P2P-drpDwn-Container {
+    flex-direction: column;
+    align-items: normal;
+  }
+  .P2P-Search-Input-Container {
+    flex-direction: column;
+    align-items: normal;
+  }
+  .P2P-Nav-List > li {
+    font-size: 9px;
+  }
+  .P2P-Sub-Nav-Btn-Box {
+    display: flex;
+  }
+  .P2P-Sub-Nav-Btn-Box > button {
+    padding: 3px 11px;
+    display: inline-block;
+    font-size: 9px;
+    width: 39px;
+  }
+  .P2P-Nav-List {
+    height: 38px;
+    gap: 10px;
+  }
+  .P2P-drpDwn-lefT {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+  }
+}
 
 @media (min-width: 576px) and (max-width: 767px) {
   .P2P-drpDwn-Container {
@@ -542,6 +572,26 @@
   .P2P-Search-Input-Container {
     flex-direction: column;
     align-items: normal;
+  }
+  .P2P-Nav-List > li {
+    font-size: 9px;
+  }
+  .P2P-Sub-Nav-Btn-Box {
+    display: flex;
+  }
+  .P2P-Sub-Nav-Btn-Box > button {
+    padding: 3px 11px;
+    display: inline-block;
+    font-size: 9px;
+    width: 39px;
+  }
+  .P2P-Nav-List {
+    height: 38px;
+    gap: 10px;
+  }
+  .P2P-drpDwn-lefT {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
   }
 }
 
