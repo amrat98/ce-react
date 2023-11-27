@@ -10,8 +10,6 @@ import { PrivacyPolicy } from "./pages/legal/privacy-policy/PrivacyPolicy";
 import { FAQ } from "./pages/legal/faq/Faq";
 import { Kyc } from "./pages/profile/kyc/Kyc";
 import { Profile } from "./pages/profile/Profile";
-import { TransferHistory } from "./pages/profile/transfer-history/TransferHistory";
-import { LoginHistory } from "./pages/profile/login-history/LoginHistory";
 import { Notification } from "./pages/profile/notification/Notification";
 import { ContactUs } from "./pages/legal/contact-us/ContactUs";
 import { Market } from "./pages/market/Market";
@@ -35,8 +33,6 @@ function App() {
           <Route path="/faq" element={<FAQ />}></Route>
           <Route path="/kyc" element={<Kyc />}></Route>
           <Route path="/profile" element={<Profile />}></Route>
-          <Route path="/transfer-history" element={<TransferHistory />}></Route>
-          <Route path="/login-history" element={<LoginHistory />}></Route>
           <Route path="/notification" element={<Notification />}></Route>
           <Route path="/market" element={<Market />} />
           <Route path="/contact-us" element={<ContactUs />}></Route>

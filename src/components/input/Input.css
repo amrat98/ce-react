@@ -53,3 +53,12 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   width: 16.503px;
   height: 11.4px;
 }
+
+@media (max-width: 767px) {
+  .Input-Box > label {
+    font-size: 12px;
+  }
+  .Input-Box > div > input::placeholder {
+    font-size: 10px;
+  }
+}
