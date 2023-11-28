@@ -1,8 +1,8 @@
 import { Footer } from "../../components/footer/Footer";
 import { CryptoStatsTable } from "../../components/table/CryptoTable";
 import { Header } from "../../components/header/Header";
-import "./home.css";
 import { Link } from "react-router-dom";
+import "./home.css";
 
 export const HomePage = () => {
   const data = [
