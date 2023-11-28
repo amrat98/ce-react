@@ -44,7 +44,7 @@ export const Footer = () => {
                 suspendisse hendrerit vitae.Lorem ipsum dolor sit amet
                 consectetur.
               </p>
-              <ul className="flex-row footer-icon-container">
+              <ul className="flex-row footer-icon-container social-icon-box">
                 {SOCIAL_HANDLE.map((item, index) => {
                   return (
                     <li key={index}>
@@ -85,6 +85,17 @@ export const Footer = () => {
               </ul>
             </nav>
           </div>
+          <ul className="flex-row footer-icon-container social-icon-mob-box">
+            {SOCIAL_HANDLE.map((item, index) => {
+              return (
+                <li key={index}>
+                  <Link className="circle">
+                    <img src={item.label} alt="" />
+                  </Link>
+                </li>
+              );
+            })}
+          </ul>
         </div>
       </footer>
     </>
