@@ -4,20 +4,18 @@
 .Forgot-Container {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-around;
   padding: 72px 0px;
-  gap: 220px;
 }
 .title {
   color: #fff;
   font-size: 45px;
   font-style: normal;
-  font-weight: 900;
+  font-weight: 600;
   line-height: normal;
-  font-family: "inter";
 }
 .forgot-pass-frm-style {
-  min-width: 568px;
+  max-width: 568px;
   border-radius: 55px;
   border: 1px solid #5c5c5c;
   background: #000;
@@ -26,6 +24,7 @@
   display: flex;
   flex-direction: column;
   gap: 51px;
+  width: 100%;
 }
 
 .reset-mtd-box {
@@ -244,7 +243,7 @@
   position: absolute;
   height: 250px;
   top: -50%;
-  left: -50%;
+  left: -46%;
   transform: translate(50%, 0px);
   z-index: 999;
 }
@@ -347,4 +346,74 @@
   font-style: normal;
   font-weight: 700;
   line-height: normal;
+}
+
+@media (max-width: 767px) {
+  .welcome-container {
+    display: none;
+  }
+  .forgot-pass-frm-style {
+    max-width: 400px;
+    padding: 40px;
+    margin: 0 auto;
+    gap: 25px;
+    min-height: auto;
+  }
+  .title {
+    font-size: 26px;
+  }
+  .form-container {
+    gap: 16px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .forgot-pass-frm-style {
+    max-width: 350px;
+    padding: 30px 30px;
+    gap: 30px;
+}
+  .welcome-container {
+    min-height: 219.393px;
+    padding: 0px 22px 0px 22px;
+    min-width: 300.335px;
+} 
+.welcome-text-Container > h3 {
+  font-size: 18px;
+}
+.welcome-container > img {
+  position: absolute;
+  height: 220px;
+  top: -50%;
+  left: -40%;
+  transform: translate(50%, 0px);
+  z-index: 999;
+}
+.form-container {
+  gap: 18px;
+}
+.title {
+  font-size: 32px;
+  
+}
+.Forgot-Container {
+  justify-content: space-between;
+}
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+  .forgot-pass-frm-style {
+    max-width: 450px;
+    padding: 41px;
+  }
+}
+
+@media (min-width: 1200px) and (max-width: 1400px) {
+  .Forgot-Container {
+    justify-content: space-around;
+  }
+  .forgot-pass-frm-style {
+    max-width: 500px;
+    padding: 41px 41px 41px 41px;
+  }
 }
