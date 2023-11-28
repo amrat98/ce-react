@@ -83,13 +83,14 @@ nav > ul > li > a {
 .footer-ul-gap {
   gap: 17px;
 }
-
+.social-icon-mob-box {
+  display: none !important;
+}
 @media (max-width: 767px) {
-  /* .footer-logo-container > img {
-    width: 17px;
-    height: 18px;
+  .social-icon-mob-box {
+    display: flex !important;
   }
-  .footer-logo-container > span {
-    font-size: 12px;
-  } */
+  .social-icon-box {
+    display: none !important;
+  }
 }
