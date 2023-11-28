@@ -28,13 +28,15 @@ export const P2P = () => {
     <>
       <Header />
       <div className="P2P-Container">
-        <div className="P2P-About-Container">
-          <h1>Buy and Sell Crypto with Your Preferred Payment Methods</h1>
-          <p>
-            Buy and sell Crypto safely and easily on NORDEK P2P. Find the best
-            offer below and buy and sell USDT <br /> with Your Preferred Payment
-            Methods today.
-          </p>
+        <div className="container">
+          <div className="P2P-About-Container">
+            <h1>Buy and Sell Crypto with Your Preferred Payment Methods</h1>
+            <p>
+              Buy and sell Crypto safely and easily on NORDEK P2P. Find the best
+              offer below and buy and sell USDT <br /> with Your Preferred
+              Payment Methods today.
+            </p>
+          </div>
         </div>
         <div className="P2P-Nav-Container">
           <div className="container">
@@ -133,7 +135,6 @@ export const P2P = () => {
           {selectNav === "Post Your Add" && <PostAdd />}
           {selectNav === "Add Payment Method" && <PaymentMethod />}
           {selectNav === "P2P Dashboard" && <P2PDashBoard />}
-
         </div>
       </div>
       <Footer />

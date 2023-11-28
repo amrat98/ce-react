@@ -6,8 +6,7 @@ footer {
 }
 .footer-container {
   display: flex;
-  justify-content: center;
-  gap: 200px;
+  justify-content: space-around;
 }
 .footer-container > nav {
   display: flex;
@@ -83,4 +82,14 @@ nav > ul > li > a {
 
 .footer-ul-gap {
   gap: 17px;
+}
+
+@media (max-width: 767px) {
+  /* .footer-logo-container > img {
+    width: 17px;
+    height: 18px;
+  }
+  .footer-logo-container > span {
+    font-size: 12px;
+  } */
 }

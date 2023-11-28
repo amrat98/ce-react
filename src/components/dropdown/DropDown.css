@@ -36,7 +36,6 @@
   line-height: normal;
 }
 
-
 .Cmn-Dropdown-Items-Container {
   margin-bottom: 12px;
 }
@@ -50,4 +49,15 @@
   cursor: pointer;
 }
 
-
+@media (max-width: 767px) {
+  .Cmn-Dropdown-Container > h3 {
+    font-size: 14px;
+  }
+  .Cmn-Dropdown  {
+    height: 40px;
+  }
+  .Cmn-Dropdown-Placeholder-Container {
+    height: 40px;
+  }
+  
+}

@@ -54,6 +54,13 @@ export const UserProfile = () => {
               <span>Buy</span> / <span>Sell</span>
             </h3>
           </div>
+          <div className="Dash-Box-P2P">
+            <p>Trades</p>
+            <span>945</span>
+            <h3>
+              <span>Buy</span> / <span>Sell</span>
+            </h3>
+          </div>
         </div>
       </div>
     </div>

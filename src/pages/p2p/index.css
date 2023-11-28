@@ -141,15 +141,10 @@
   line-height: normal;
 }
 
-.P2P-Dashboard-Btn-Container {
-  display: flex;
-  justify-content: space-between;
-}
-
 .P2P-Dashboard-Btn-Left-Box {
-  display: flex;
-  flex: 0.7;
-  gap: 7px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+  grid-gap: 7px;
 }
 
 .P2P-Dashboard-Btn-Right-Box {
@@ -193,8 +188,9 @@
 }
 
 .PostAdd-More-Info-Drp-Dwn {
-  display: flex;
-  gap: 21px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+  grid-gap: 21px;
   margin-bottom: 30px;
 }
 
@@ -378,7 +374,6 @@
 }
 
 .Dash-Box-P2P {
-  min-width: 289px;
   min-height: 142px;
   border-radius: 10px;
   background: #22252e;
@@ -399,8 +394,9 @@
 }
 
 .Dash-Box-P2P-Parent {
-  display: flex;
-  gap: 25px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+  grid-gap: 25px;
   margin: 55px 0px;
 }
 
@@ -562,6 +558,77 @@
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
   }
+  .P2P-About-Container > h1 {
+    font-size: 15px;
+  }
+  .P2P-About-Container > p {
+    font-size: 10px;
+  }
+  .P2P-Nav-List {
+    flex-wrap: wrap;
+  }
+  .P2P-Search-Input-Left > div {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .P2P-Search-Input-Left > :nth-child(2) {
+    margin-left: 8px;
+  }
+  .P2P-Nav-List > li {
+    padding: 0 6px;
+  }
+  .PostAdd-head {
+    font-size: 15px;
+    margin-bottom: 10px;
+  }
+  .PostAdd-Sub-Head {
+    font-size: 12px;
+    margin-bottom: 14px;
+  }
+  .PaymentMethod-Container > h3 {
+    font-size: 15px;
+  }
+  .PaymentMethod-Container > p {
+    font-size: 10px;
+  }
+  .Payment-Method-DrpDwn-Container > button {
+    margin-top: 17px;
+  }
+  .PaymentMethod-Container {
+    padding: 20px 0px;
+  }
+  .P2P-Dashboard-DrpDwn-Left {
+    grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+    display: grid;
+    grid-gap: 20px;
+  }
+  .P2P-Dashboard-DrpDwn-Container {
+    flex-direction: column;
+    gap: 20px;
+    align-items: normal;
+  }
+  .P2P-Dashboard-Head-Container > h1 {
+    font-size: 15px;
+  }
+  .P2P-Dashboard-Head-Container > p {
+    font-size: 12px;
+  }
+  .P2P-Dashboard-Container {
+    padding: 20px 0px;
+  }
+  .P2PDashBoard-Table {
+    overflow-x: scroll;
+  }
+  .PostAdd-Container {
+    padding: 20px 0px;
+  }
+
+  .PostAdd-top-container {
+    flex-direction: column;
+    align-items: normal;
+    gap: 15px;
+    margin-top: 15px;
+  }
 }
 
 @media (min-width: 576px) and (max-width: 767px) {
@@ -593,6 +660,51 @@
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
   }
+  .P2P-About-Container > h1 {
+    font-size: 15px;
+  }
+  .PostAdd-head {
+    font-size: 15px;
+    margin-bottom: 14px;
+  }
+  .PostAdd-Sub-Head {
+    font-size: 12px;
+    margin-bottom: 14px;
+  }
+  .PaymentMethod-Container > h3 {
+    font-size: 15px;
+  }
+  .PaymentMethod-Container > p {
+    font-size: 10px;
+  }
+  .P2P-Dashboard-DrpDwn-Left {
+    grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+    display: grid;
+    grid-gap: 20px;
+  }
+  .P2P-Dashboard-DrpDwn-Container {
+    flex-direction: column;
+    gap: 20px;
+    align-items: normal;
+  }
+  .P2P-Dashboard-Head-Container > h1 {
+    font-size: 15px;
+  }
+  .P2P-Dashboard-Head-Container > p {
+    font-size: 12px;
+  }
+  .P2P-Dashboard-Container {
+    padding: 40px 0px;
+  }
+  .P2PDashBoard-Table {
+    overflow-x: scroll;
+  }
+  .PostAdd-top-container {
+    flex-direction: column;
+    align-items: normal;
+    gap: 15px;
+    margin-top: 15px;
+  }
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
@@ -603,5 +715,17 @@
   .P2P-Search-Input-Container {
     flex-direction: column;
     align-items: normal;
+  }
+  .Dash-Box-P2P-Parent {
+    grid-template-columns: repeat(auto-fit, minmax(201px, 1fr));
+  }
+  .P2P-Dashboard-DrpDwn-Container {
+    flex-direction: column;
+    align-items: normal;
+    gap: 20px;
+  }
+  .P2P-Dashboard-DrpDwn-Right {
+    width: 30%;
+    align-self: flex-end;
   }
 }

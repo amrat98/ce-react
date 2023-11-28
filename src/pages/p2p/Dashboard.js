@@ -23,7 +23,6 @@ const head = [
   "Action",
 ];
 export const P2PDashBoard = () => {
-
   return (
     <div className="P2P-Dashboard-Container">
       <div className="P2P-Dashboard-Head-Container">
@@ -32,16 +31,13 @@ export const P2PDashBoard = () => {
           On this page you can view and manage your advertisements and trade
         </p>
       </div>
-      <UserProfile/>
-      <div className="P2P-Dashboard-Btn-Container">
-        <div className="P2P-Dashboard-Btn-Left-Box">
-          <Button ClASSS={"blue"}>MY ADVERTISEMENT</Button>
-          <Button ClASSS={"black"}>COMPLETED TRADES</Button>
-          <Button ClASSS={"black"}>CANCELLED TRADES</Button>
-        </div>
-        <div className="P2P-Dashboard-Btn-Right-Box">
-          <Button ClASSS={"black"}>Download Data in CSV Format</Button>
-        </div>
+      <UserProfile />
+      <div className="P2P-Dashboard-Btn-Left-Box">
+        <Button ClASSS={"blue"}>MY ADVERTISEMENT</Button>
+        <Button ClASSS={"black"}>PENDING TRADES</Button>
+        <Button ClASSS={"black"}>COMPLETED TRADES</Button>
+        <Button ClASSS={"black"}>COMPLETED TRADES</Button>
+        <Button ClASSS={"black"}>DISPUTE TRADES</Button>
       </div>
       <div className="P2P-Dashboard-Table-Container">
         <h4>All Active Trades</h4>
@@ -56,7 +52,9 @@ export const P2PDashBoard = () => {
             <Button ClASSS={"blue"}>Search</Button>
           </div>
         </div>
-        <Table head={head} />
+        <div className="P2PDashBoard-Table">
+          <Table head={head} />
+        </div>
       </div>
     </div>
   );
