@@ -213,6 +213,9 @@
   min-height: 134px;
 }
 @media (max-width: 575px) {
+  .crypto-table-main-container {
+    overflow-x: scroll;
+  }
   .heading {
     font-size: 24px;
   }
