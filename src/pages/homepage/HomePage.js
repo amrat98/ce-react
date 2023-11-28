@@ -77,15 +77,6 @@ export const HomePage = () => {
             </div>
           </div>
         </section>
-        {/* <section>
-          <div className="homepage-cards-container cmn-padding">
-            <div className="homepage-cards-main-container">
-              <img src="/assets/images/cards.webp" alt="img" />
-              <img src="/assets/images/cards.webp" alt="img" />
-              <img src="/assets/images/cards.webp" alt="img" />
-            </div>
-          </div>
-        </section> */}
         <section>
           <CryptoStatsTable data={data} />
         </section>
@@ -221,6 +212,15 @@ export const HomePage = () => {
             </div>
           </div>
         </section>
+        {/* <section>
+          <div className="homepage-cards-container cmn-padding">
+            <div className="homepage-cards-main-container">
+              <img src="/assets/images/cards.webp" alt="img" />
+              <img src="/assets/images/cards.webp" alt="img" />
+              <img src="/assets/images/cards.webp" alt="img" />
+            </div>
+          </div>
+        </section>*/}
         <Footer />
       </div>
     </>

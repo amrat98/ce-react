@@ -212,4 +212,292 @@
   max-width: 361px;
   min-height: 134px;
 }
+@media (max-width: 575px) {
+  .heading {
+    font-size: 24px;
+  }
+  .hero-sectoion-container > img {
+    max-height: 160px;
+  }
 
+  .heading {
+    font-size: 18px;
+  }
+  .hero-sectoion-container > div {
+    gap: 17px;
+  }
+  .hero-sectoion-container > div > p {
+    font-size: 9px;
+  }
+  .hero-sectoion-container > div > button {
+    padding: 9px 16px;
+    width: max-content;
+    height: auto;
+    font-size: 7px;
+  }
+  .table-nav-inactive {
+    font-size: 14px;
+  }
+  .table-nav-active {
+    font-size: 14px;
+  }
+  .crypto-table {
+    padding: 30px 0px;
+  }
+  .crypto-table > thead > tr > th {
+    font-size: 12px;
+  }
+  .crypto-market-stats > img {
+    width: 48px;
+  }
+  .crypto-table > tbody > tr > :nth-child(2) {
+    font-size: 10px;
+  }
+  .table-nav {
+    gap: 25px;
+  }
+  .home-bg-background {
+    gap: 60px;
+  }
+  .Count-Main-Container > div > span {
+    font-size: 18px;
+  }
+  .Count-Main-Container > div > p {
+    font-size: 14px;
+  }
+  .Core-Product-Head > p {
+    font-size: 13px;
+  }
+  .Core-Product-Head {
+    text-align: center;
+  }
+  .Core-Product-Key-Points > div > h3 {
+    font-size: 18px;
+  }
+  .Core-Product-Key-Points > div > p {
+    font-size: 14px;
+  }
+  .Core-Product-Key-Points > img {
+    width: 33px;
+    height: 32px;
+  }
+  .Core-Product-Main-Container {
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+  }
+  .Core-Product-Right-Box > img {
+    max-height: 300px;
+    width: auto;
+  }
+  .Core-Product-Left-Box {
+    margin-top: 26px;
+  }
+  .trade-anytime-anywhere-main-container > div > p {
+    font-size: 9px;
+  }
+  .application-btn-container {
+    grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+    display: grid;
+    width: 100%;
+  }
+  .application-btn-container > button {
+    font-size: 20px;
+    text-align: center;
+    justify-content: center;
+  }
+  .trade-anytime-anywhere-main-container > img {
+    max-height: 350px;
+    width: auto;
+  }
+}
+@media (min-width: 576px) and (max-width: 768px) {
+  .heading {
+    font-size: 30px;
+  }
+  .hero-sectoion-container > div > p {
+    font-size: 14px;
+  }
+  .hero-sectoion-container > div > button {
+    padding: 10px 25px;
+    width: max-content;
+    height: auto;
+    font-size: 18px;
+  }
+  .hero-sectoion-container > img {
+    max-height: 250px;
+  }
+  .hero-sectoion-container > div {
+    gap: 30px;
+  }
+  .table-nav-inactive {
+    font-size: 14px;
+  }
+  .table-nav-active {
+    font-size: 14px;
+  }
+  .crypto-table {
+    padding: 30px 20px;
+  }
+  .crypto-table > thead > tr > th {
+    font-size: 12px;
+  }
+  .crypto-table > tbody > tr > td {
+    font-size: 10px;
+  }
+  .crypto-market-stats > img {
+    width: 48px;
+  }
+  .crypto-table > tbody > tr > :nth-child(2) {
+    font-size: 10px;
+  }
+  .table-nav {
+    gap: 25px;
+  }
+  .home-bg-background {
+    gap: 60px;
+  }
+  .Count-Main-Container > div > span {
+    font-size: 32px;
+  }
+  .Count-Main-Container > div > p {
+    font-size: 14px;
+  }
+  .Core-Product-Key-Points > div > p {
+    font-size: 14px;
+  }
+  .Core-Product-Head > p {
+    font-size: 14px;
+  }
+
+  .Core-Product-Key-Points > div > h3 {
+    font-size: 24px;
+  }
+  .Core-Product-Head {
+    text-align: center;
+  }
+  .Core-Product-Key-Points > img {
+    height: 30px;
+  }
+  .Core-Product-Right-Box > img {
+    max-height: 260px;
+    width: auto;
+  }
+  .Core-Product-Main-Container {
+    align-items: center;
+  }
+  .trade-anytime-anywhere-main-container > div > p {
+    font-size: 14px;
+  }
+  .trade-anytime-anywhere-main-container > img {
+    max-height: 350px;
+    width: auto;
+  }
+  .application-btn-container {
+    gap: 14px;
+  }
+  .application-btn-container > button {
+    font-size: 14px;
+  }
+  .application-btn-container > button {
+    padding: 8px 20px;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .heading {
+    font-size: 42px;
+  }
+  .hero-sectoion-container > div > p {
+    font-size: 18px;
+  }
+
+  .hero-sectoion-container > img {
+    max-height: 308px;
+    height: 100%;
+  }
+  .table-nav-inactive {
+    font-size: 24px;
+  }
+  .table-nav-active {
+    font-size: 24px;
+  }
+  .table-nav {
+    gap: 40px;
+  }
+  .crypto-table > thead > tr > th {
+    font-size: 14px;
+  }
+  .crypto-table {
+    border-radius: 20px;
+    border: 1px solid #484848;
+    background: #161616;
+    padding: 30px 20px;
+  }
+  .Count-Main-Container > div > span {
+    font-size: 42px;
+  }
+  .Count-Main-Container > div > p {
+    font-size: 16px;
+  }
+  .Core-Product-Key-Points > div > p {
+    font-size: 18px;
+  }
+  .Core-Product-Head > p {
+    font-size: 18px;
+  }
+
+  .Core-Product-Key-Points > div > h3 {
+    font-size: 28px;
+  }
+  .Core-Product-Right-Box > img {
+    max-height: 320px;
+    width: auto;
+  }
+  .trade-anytime-anywhere-main-container > div > p {
+    font-size: 18px;
+  }
+  .application-btn-container > button {
+    font-size: 16px;
+  }
+  .trade-anytime-anywhere-main-container > img {
+    max-height: 350px;
+    width: auto;
+  }
+  .application-btn-container {
+    gap: 16px;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1280px) {
+  .heading {
+    font-size: 48px;
+  }
+  .hero-sectoion-container > div > p {
+    font-size: 20px;
+  }
+  .hero-sectoion-container > div > button {
+    padding: 18px 50px;
+    width: max-content;
+    height: auto;
+    font-size: 18px;
+  }
+  .Count-Main-Container > div > span {
+    font-size: 48px;
+  }
+  .Count-Main-Container > div > p {
+    font-size: 20px;
+  }
+  .Core-Product-Head > p {
+    font-size: 20px;
+  }
+  .Core-Product-Key-Points > div > p {
+    font-size: 20px;
+  }
+  .Core-Product-Right-Box > img {
+    max-height: 350px;
+    width: auto;
+  }
+  .trade-anytime-anywhere-main-container > div > p {
+    font-size: 20px;
+  }
+}

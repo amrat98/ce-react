@@ -1,5 +1,9 @@
 .header-bg {
   background: #141414;
+  position: relative;
+}
+.header-bg > div{
+  padding: 0 16px;
 }
 .Header2MainContainer {
   display: flex;
@@ -98,4 +102,28 @@
 
 .Header-Nav-Container > nav > ul > li > a > img {
   margin-left: 6px;
+}
+
+
+@media  (max-width: 991px) {
+  .Header-Nav-Container {
+    position: absolute;
+    top: 100%;
+    width: 100vw;
+    left: 0%;
+    padding: 0 16px;
+    background: #141414;
+  }
+  .Header-Nav-Container > nav {
+    width: 100%;
+  }
+  .Header-Nav-Container > nav > ul {
+    flex-direction: column;
+    gap: 0px;
+    width: 100%;
+  }
+  .Header-Nav-Container > nav > ul > li {
+    padding: 24px 0px;
+    width: 100%;
+  }
 }
