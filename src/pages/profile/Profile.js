@@ -51,7 +51,7 @@ export const Profile = () => {
     <>
       <div className="Profile-Main-Container" style={{ background: "#060203" }}>
         <Header />
-        <div>
+        <div className="Profile-Padd-Container">
           <div className="container">
             <div className="Profile-Container">
               <Sidebar
