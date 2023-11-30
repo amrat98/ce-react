@@ -40,10 +40,10 @@ export const Nominee = () => {
       <div className="Nominee-Input-Container">
         <div className="Nominee-Input-Left">
           <DateInput label={"From Date :"} placeholder={"dd/mm/yyyy"} />
-          <Input label={"Search By Email :"} placeholder={"Enter email"} />
+          <DateInput label={"To date :"} placeholder={"dd/mm/yyyy"} />
         </div>
         <div className="Nominee-Input-Right">
-          <DateInput label={"To date :"} placeholder={"dd/mm/yyyy"} />
+          <Input label={"Search By Email :"} placeholder={"Enter email"} />
           <Input
             label={"Search By Mobile Number :"}
             placeholder={"Enter mobile"}
@@ -61,7 +61,7 @@ export const Nominee = () => {
       </div>
       <div className="Nominee-Accordian-Container">
         <h1>Instructions</h1>
-        <Accordian data={faq} handle={handleClick}/>
+        <Accordian data={faq} handle={handleClick} />
       </div>
     </div>
   );

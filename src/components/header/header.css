@@ -1,6 +1,9 @@
 .header-bg {
   background: #141414;
   position: relative;
+  position: fixed;
+  z-index: 999;
+  width: 100%;
 }
 .header-bg > div {
   padding: 0 16px;

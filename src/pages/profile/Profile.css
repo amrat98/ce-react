@@ -110,6 +110,11 @@
   .Profile-Title-Container > span {
     font-size: 16px;
   }
+  .Profile-Title-Container {
+    height: auto;
+    min-height: auto;
+    padding: 0px;
+  }
 }
 
 @media (min-width: 576px) and (max-width: 767px) {
@@ -143,6 +148,10 @@
   .Profile-Title-Container > span {
     font-size: 16px;
   }
+  .Profile-Title-Container {
+    height: auto;
+    min-height: auto;
+  }
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
@@ -156,6 +165,7 @@
   table {
     border-spacing: 8px;
   }
+
 }
 
 @media (min-width: 992px) and (max-width: 1199px) {

@@ -16,6 +16,7 @@ import { Market } from "./pages/market/Market";
 import { Exchange } from "./pages/exchange/Exchange";
 import { P2P } from "./pages/p2p/P2P";
 import { Wallet } from "./pages/wallet/Wallet";
+import { Feedback } from "./pages/legal/feedback/FeedBack";
 import "./App.css";
 function App() {
   return (
@@ -38,6 +39,8 @@ function App() {
           <Route path="/contact-us" element={<ContactUs />}></Route>
           <Route path="/p2p" element={<P2P />} />
           <Route path="/wallet" element={<Wallet />} />
+          <Route path="/exchange" element={<Exchange/>}/>
+          <Route path="/feedback" element={<Feedback/>}/>
         </Routes>
       </BrowserRouter>
     </>

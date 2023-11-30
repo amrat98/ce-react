@@ -1,5 +1,6 @@
 .Parent-Element {
   background: #000;
+  padding-top: 80px;
 }
 .Forgot-Container {
   display: flex;

@@ -75,7 +75,52 @@
   margin: 52px 0px;
 }
 
-
 .Anti-Phishing-Input-Container {
   margin-top: 17px;
+}
+.auth-btn {
+  min-width: 197px;
+  max-width: 197px;
+}
+@media (max-width: 767px) {
+  .auth-head {
+    font-size: 13px;
+  }
+  .Left-Box {
+    gap: 7px;
+  }
+  .Left-Box > img {
+    width: 16px;
+    height: 16px;
+  }
+  .Left-Box > div > p {
+    font-size: 9px;
+  }
+  .Right-Box > div > p {
+    font-size: 9px;
+  }
+  .Right-Box > div > p > span {
+    font-size: 9px;
+  }
+  .auth-btn {
+    max-width: 94px;
+    width: 100%;
+    padding: 6px;
+    min-width: auto;
+  } 
+  .Chip-Container {
+    padding-left: 15px;
+  } 
+  .Btm-Container {
+    height: auto;
+    margin-top: 20px;
+  }
+  .Security-Container {
+    height: auto;
+    margin-top: 20px;
+  }
+  .Chip-Container {
+    height: auto;
+    min-height: auto;
+  }
 }
