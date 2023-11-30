@@ -76,7 +76,6 @@ export const TransactionHistory = () => {
             <DateInput label={"To"} placeholder={"mm/dd/yyyy"} name={"to"} />
           </div>
           <div className="Wallet-Transfer-History-Tbl-Head">
-            <span>DEPOSIT HISTORY --DOT</span>
             <div>
               <Button ClASSS={"blue"} style={{ minWidth: "128.556px" }}>
                 Search

@@ -29,6 +29,11 @@
   line-height: normal;
   margin-bottom: 13px;
 }
+@media (max-width: 575px) {
+  .Nominee-Input-Left {
+    flex-direction: column;
+  }
+}
 
 @media (max-width: 767px) {
   .Nominee-Input-Container > :nth-child(2) {

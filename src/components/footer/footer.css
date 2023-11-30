@@ -93,4 +93,7 @@ nav > ul > li > a {
   .social-icon-box {
     display: none !important;
   }
+  .footer-logo-container {
+    gap: 5px;
+  }
 }

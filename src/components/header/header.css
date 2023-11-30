@@ -139,7 +139,7 @@
 }
 
 .menu-button.open .bar3 {
-  transform: rotate(45deg) translate(-5px, -6px);
+  transform: rotate(45deg) translate(-4px, -6px);
 }
 
 .menu {
@@ -168,6 +168,13 @@
 }
 
 @media (min-width: 280px) and (max-width: 768px) {
+  .logo-container > img {
+    width: 35px;
+    height: 35px;
+  }
+  .logo-container > span {
+    font-size: 14px;
+  }
   .menu {
     position: absolute;
     top: 60px;
