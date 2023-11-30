@@ -33,3 +33,15 @@
   line-height: 22px;
   margin-bottom: 42px;
 }
+
+@media (max-width: 767px) {
+  .legal-head {
+    font-size: 18px;
+  }
+  .legal-title {
+    font-size: 14px;
+  }
+  .text {
+    font-size: 12px;
+  }
+}

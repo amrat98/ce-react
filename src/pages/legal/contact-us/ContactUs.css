@@ -1,5 +1,6 @@
 .Contact-Us-Container {
   background-color: #141416;
+  padding-top: 50px;
 }
 .Contact-Us-Form-Container {
   max-width: 631px;
@@ -38,4 +39,16 @@
   font-weight: 400;
   line-height: 26px;
   padding: 12px 15px;
+}
+
+@media (max-width: 767px) {
+  .Contact-Us-Form-Container {
+    padding: 50px;
+    gap: 15px;
+  }
+  .Contact-Us-Form-Container > h1 {
+    font-size: 16px;
+    margin-bottom: 0px;
+    text-align: left;
+  }
 }
