@@ -21,7 +21,7 @@ export const Header = () => {
               <nav>
                 <ul>
                   <li>
-                    <Link to={"/"}>Buy Crypto</Link>
+                    <Link to={"/exchange"}>Buy Crypto</Link>
                   </li>
                   <li>
                     <Link to={"/market"}>Market</Link>
