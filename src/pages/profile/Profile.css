@@ -4,6 +4,10 @@
   gap: 52px;
 }
 
+.Profile-Padd-Container {
+  padding-top: 150px;
+}
+
 .Profile-form-title {
   color: #fff;
   font-size: 15px;
@@ -83,6 +87,9 @@
 }
 
 @media (min-width: 280px) and (max-width: 575px) {
+  .Kyc-Container {
+    padding: 30px 0px;
+  }
   .Profile-Container {
     flex-direction: column;
   }
@@ -92,6 +99,8 @@
   }
   .Profile-Info-Container {
     flex-direction: column;
+    padding-left: 0px;
+    padding-right: 0px;
   }
   .Profile-Info-Container > :nth-child(1) {
     display: flex;
@@ -115,9 +124,15 @@
     min-height: auto;
     padding: 0px;
   }
+  .Profile-Padd-Container {
+    padding-top: 90px;
+  }
 }
 
 @media (min-width: 576px) and (max-width: 767px) {
+  .Kyc-Container {
+    padding: 30px 0px;
+  }
   .Profile-Container {
     flex-direction: column;
   }
@@ -151,6 +166,11 @@
   .Profile-Title-Container {
     height: auto;
     min-height: auto;
+    padding: 0px;
+    margin-bottom: 20px;
+  }
+  .Profile-Padd-Container {
+    padding-top: 90px;
   }
 }
 

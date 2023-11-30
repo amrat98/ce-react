@@ -247,6 +247,12 @@
   .Wallet-Overview-Amount-Container {
     padding: 20px 0px;
   }
+  .Wallet-Overview-Search-Container  {
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 31px;
+    padding: 0px;
+  }
   .Wallet-Overview-Search-Container > h3 {
     flex: 0.6;
   }
@@ -302,6 +308,25 @@
   .Wallet-Content-Box > ul > li > img {
     height: 8px;
   }
+  .Wallet-Overview-Nav-Btn-Container {
+    gap: 4px;
+  }
+  .Transaction-History-Container {
+    flex-direction: column;
+  } 
+  .Transaction-History-Sidebar > ul {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(121px, 1fr));
+    padding: 5px 0px;
+  }
+  .Wallet-Transfer-History-Btn-Container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
+  }
+  .Wallet-Transfer-History-drp-dwn-Container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(204px, 1fr));
+  }
 }
 @media (min-width: 768px) and (max-width: 991px) {
   .Wallet-Overview-Nav-Container {
@@ -318,6 +343,14 @@
   .Wallet-Overview-Search-Container > div {
     flex: 1;
   }
+  .Wallet-Transfer-History-Btn-Container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(204px, 1fr));
+  }
+  .Wallet-Transfer-History-drp-dwn-Container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(204px, 1fr));
+  }
 }
 
 @media (min-width: 992px) and (max-width: 1199px) {
@@ -327,5 +360,13 @@
 
   .Wallet-Overview-Nav-Btn-Container {
     flex: 0.6;
+  }
+  .Wallet-Transfer-History-Btn-Container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(212px, 1fr));
+  }
+  .Wallet-Transfer-History-drp-dwn-Container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(212px, 1fr));
   }
 }

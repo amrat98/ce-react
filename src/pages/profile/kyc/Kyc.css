@@ -139,3 +139,6 @@ tbody > tr > td {
     gap: 60px;
 }
 
+.Kyc-Container-Table {
+  overflow-x: scroll;
+}
