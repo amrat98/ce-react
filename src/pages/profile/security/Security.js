@@ -3,7 +3,8 @@ import { Button } from "../../../components/button/Button";
 import { Input } from "../../../components/input/Input";
 export const Security = () => {
   const style = {
-    minWidth: "197px",
+    maxWidth: "197px",
+    width: "100%"
   };
   return (
     <div className="Security-Container">
@@ -12,7 +13,7 @@ export const Security = () => {
           <p>
             Google Auth : <span>Disable</span>
           </p>
-          <Button ClASSS={"green"} style={style}>
+          <Button ClASSS={"green auth-btn"}>
             Enter Google Auth
           </Button>
         </div>
@@ -22,7 +23,7 @@ export const Security = () => {
           <p>
             SMS Auth : <span>Disable</span>
           </p>
-          <Button ClASSS={"green"} style={style}>
+          <Button ClASSS={"green auth-btn"} >
             Enter Google Auth
           </Button>
         </div>
@@ -32,7 +33,7 @@ export const Security = () => {
           <p>
             Email Auth : <span>Disable</span>
           </p>
-          <Button ClASSS={"green"} style={style}>
+          <Button ClASSS={"green auth-btn"}>
             Enter Google Auth
           </Button>
         </div>
@@ -63,7 +64,7 @@ export const Security = () => {
             <p>
               Email Auth : <span>Disable</span>
             </p>
-            <Button ClASSS={"green"} style={style}>
+            <Button ClASSS={"green auth-btn"} >
               Enter Google Auth
             </Button>
           </div>
@@ -71,7 +72,7 @@ export const Security = () => {
       </div>
       <div className="Btm-Container">
         <h3 className="auth-head">Account Activity</h3>
-        <Button ClASSS={"blue"} style={{ maxWidth: "197px" }}>
+        <Button ClASSS={"blue auth-btn"}>
           More
         </Button>
       </div>

@@ -1,6 +1,6 @@
 .Wallet-Container {
   background-color: #18191d;
-  padding: 70px 0px;
+  padding: 100px 0px;
 }
 .Wallet-Overview-Nav-Container {
   display: flex;
@@ -236,11 +236,17 @@
   .Wallet-Overview-Nav-Container {
     flex-direction: column;
     align-items: flex-start;
+    padding: 0px 0px;
   }
   .Wallet-Overview-Nav-Container > * {
     width: 100%;
   }
-
+  .Wallet-Overview-Table-Container {
+    padding: 0px;
+  }
+  .Wallet-Overview-Amount-Container {
+    padding: 20px 0px;
+  }
   .Wallet-Overview-Search-Container > h3 {
     flex: 0.6;
   }
@@ -261,6 +267,8 @@
   }
   .Wallet-Btm-Container {
     flex-direction: column;
+    padding: 30px 0px;
+    gap: 0px;
   }
   .Wallet-Form-Box {
     width: 100%;
@@ -287,6 +295,12 @@
   }
   .Wallet-Extra-Info-Container > div > p {
     font-size: 7px;
+  }
+  .Wallet-Content-Box > ul > li {
+    font-size: 10px;
+  }
+  .Wallet-Content-Box > ul > li > img {
+    height: 8px;
   }
 }
 @media (min-width: 768px) and (max-width: 991px) {
