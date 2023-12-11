@@ -17,6 +17,7 @@ import { Exchange } from "./pages/exchange/Exchange";
 import { P2P } from "./pages/p2p/P2P";
 import { Wallet } from "./pages/wallet/Wallet";
 import { Feedback } from "./pages/legal/feedback/FeedBack";
+
 import "./App.css";
 function App() {
   return (

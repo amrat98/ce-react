@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Success } from "./Success";
 import { Header } from "../header/Header2";
+import { validatePhone, validateEmail } from "../../utlis/Validation";
 import "./index.css";
 export const ForgotPassword = () => {
   const [email, setEmail] = useState("");
@@ -8,7 +9,7 @@ export const ForgotPassword = () => {
   const [newPassword, setNewPassword] = useState("");
   const [message, setMessage] = useState("");
   const [step, setStep] = useState(1);
-  const [resetMethod, setResetMethod] = useState("email");
+  const [forgotOption, setForgotOption] = useState("email");
   return (
     <>
     <Header/>
@@ -23,9 +24,9 @@ export const ForgotPassword = () => {
                     <div className="form-container">
                       <div className="reset-mtd-box">
                         <button
-                          onClick={() => setResetMethod("email")}
+                          onClick={() => setForgotOption("email")}
                           className={
-                            resetMethod === "email"
+                            forgotOption === "email"
                               ? "active-btn"
                               : "inactive-btn"
                           }
@@ -33,9 +34,9 @@ export const ForgotPassword = () => {
                           Email
                         </button>
                         <button
-                          onClick={() => setResetMethod("mobile")}
+                          onClick={() => setForgotOption("mobile")}
                           className={
-                            resetMethod === "mobile"
+                            forgotOption === "mobile"
                               ? "active-btn"
                               : "inactive-btn"
                           }
@@ -43,7 +44,7 @@ export const ForgotPassword = () => {
                           Mobile Number
                         </button>
                       </div>
-                      {resetMethod === "email" ? (
+                      {forgotOption === "email" ? (
                         <>
                           <div className="input-continer">
                             <p>Email Address :</p>
