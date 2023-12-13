@@ -17,7 +17,7 @@ import { Exchange } from "./pages/exchange/Exchange";
 import { P2P } from "./pages/p2p/P2P";
 import { Wallet } from "./pages/wallet/Wallet";
 import { Feedback } from "./pages/legal/feedback/FeedBack";
-
+import { Nft } from "./pages/nft/NFt";
 import "./App.css";
 function App() {
   return (
@@ -42,6 +42,7 @@ function App() {
           <Route path="/wallet" element={<Wallet />} />
           <Route path="/exchange" element={<Exchange/>}/>
           <Route path="/feedback" element={<Feedback/>}/>
+          <Route path="/nft" element={<Nft/>}></Route>
         </Routes>
       </BrowserRouter>
     </>

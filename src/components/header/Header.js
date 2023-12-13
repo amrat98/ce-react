@@ -30,7 +30,7 @@ export const Header = () => {
                     <Link to={"/"}>Trade</Link>
                   </li>
                   <li>
-                    <Link to={"/"}>NFT</Link>
+                    <Link to={"/nft"}>NFT</Link>
                   </li>
                   <li>
                     <Link to={"/p2p"}>P2P</Link>
