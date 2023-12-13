@@ -1,0 +1,250 @@
+.NftMarketPlace-Table {
+  width: 100%;
+}
+
+.NftMarketPlace-Table-head > tr > th {
+  text-align: left;
+  color: #fff;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 150%; /* 24px */
+  letter-spacing: 0.2px;
+}
+
+.NftMarketPlace-Table-Td-Container {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+}
+
+.NftMarketPlace-Table-Td-Container > :nth-child(1) {
+  width: 54px;
+  height: 54px;
+  border-radius: 10px;
+}
+.NftMarketPlace-Table-Td-Container > :nth-child(1) > img {
+  width: 100%;
+  height: 100%;
+}
+.NftMarketPlace-Table-Td-Container > :nth-child(2) > h3 {
+  color: #fff;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 0.2px;
+  margin-bottom: 7px;
+}
+.NftMarketPlace-Table-Td-Container > :nth-child(2) > p {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%; /* 18px */
+  letter-spacing: 0.2px;
+}
+
+._change-cont {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 9px;
+}
+
+._change-cont > p {
+  color: #d4324f;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%; /* 21px */
+  letter-spacing: 0.2px;
+}
+
+._change-cont > button {
+  border-radius: 69.737px;
+  background: #d4324f;
+  padding: 1.395px 13.947px;
+  color: #fff;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%; /* 21px */
+  letter-spacing: 0.2px;
+}
+
+.NftMarketPlace-Table-container {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  align-items: flex-start;
+}
+
+.NftMarketPlace-Table-container > p {
+  color: #029cf5;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%; /* 21px */
+  letter-spacing: 0.2px;
+}
+
+.NftMarketPlace-Table-container > span {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%; /* 21px */
+  letter-spacing: 0.2px;
+}
+
+.Nft-Parent-Container {
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+  padding: 80px 0px;
+}
+
+.Nft-Heading {
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 125%; /* 50px */
+  letter-spacing: 0.2px;
+  color: #fff;
+  margin-bottom: 44px;
+}
+
+.nft-btn {
+  border-radius: 100px;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 10px 20px;
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 17.452px;
+  border: none;
+}
+.nft-active-btn {
+  color: #fff;
+  background: #029cf5;
+}
+.NftMarketPlaceCard-Filter-Container {
+  margin-bottom: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.NftMarketPlaceCard-Filter-Container > :nth-child(1) {
+  display: flex;
+  gap: 12px;
+}
+
+.NftMarketPlaceCard-Filter-Container > :nth-child(2) {
+  display: flex;
+}
+
+.NftMarketPlaceCard-Filter-Container > :nth-child(2) > span {
+  color: #fff;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  letter-spacing: 0.2px;
+  margin-left: 2px;
+}
+
+.hot-aution-head-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.hot-aution-head {
+  background: linear-gradient(107deg, #f90 5.39%, #ff5c00 45.42%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.Collections-head {
+  color: #029cf5;
+  position: relative;
+  display: inline-block;
+}
+
+.Nft-Collection-DrpDwn {
+  position: absolute;
+  z-index: 9;
+  min-width: 106px;
+  width: 100%;
+  background: #fff;
+  left: 0;
+  top: 100%;
+}
+
+.Nft-Collection-DrpDwn > p {
+  color: #000;
+  text-align: center;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  letter-spacing: 0.2px;
+  padding: 24px 13px;
+  cursor: pointer;
+}
+
+.Nft-Tap-Container {
+  padding: 4px;
+  border-radius: 50px;
+  border: 1px solid #393939;
+  background: #22252e;
+  height: max-content;
+}
+
+.tapButton {
+  border: none;
+  width: 95px;
+  padding: 6px 15px;
+  border-radius: 50px;
+}
+
+.transparentBg {
+  background: transparent;
+  color: #78819f;
+}
+
+.Tap-Btn-Parent-Container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.Tap-Btn-Parent-Container > :nth-child(1) {
+  display: flex;
+  gap: 27px;
+}
+
+.Tap-Btn-Parent-Right-Child {
+  display: flex;
+  gap: 7px;
+}
+
+.Tap-Btn-Parent-Right-Child > * {
+  padding: 16px 16px;
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  letter-spacing: 0.2px;
+  height: max-content;
+  border-radius: 12px;
+  background: rgba(2, 156, 245, 0.25);
+  border: none;
+}
+
+.Tap-Btn-Parent-Right-Child > :nth-last-child(1) {
+  position: relative;
+  cursor: pointer;
+}
