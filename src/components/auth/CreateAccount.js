@@ -78,7 +78,7 @@ export const CreateAccount = () => {
     }
     if (formIsValid) {
       dispatch(signUpAsync({ email: email, password: password, phone: phone }));
-      setStep(2);
+      // setStep(2);
     } else {
       console.log(newErrors);
       setErrors(newErrors);

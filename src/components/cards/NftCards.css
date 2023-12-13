@@ -1,0 +1,114 @@
+.Nft-MarketPlace-Card {
+  min-height: 495px;
+  padding: 0 8.05px;
+  width: 100%;
+  background: transparent;
+  position: relative;
+  border-radius: 12.073px;
+  border: 0.503px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0px 8.049px 12.073px 0px rgba(30, 30, 30, 0.04);
+}
+
+.Nft-MarketPlace-Image-Container {
+  background-size: 100% 100% !important;
+  background-repeat: no-repeat !important;
+  max-height: 332.012px;
+  width: 100%;
+  height: 100%;
+  border-radius: 12.073px;
+  position: relative;
+}
+
+.timer-box {
+  position: absolute;
+  max-height: 48.293px;
+  width: 100%;
+  height: 100%;
+  max-width: 126.768px;
+  z-index: 1;
+  top: 12.67px;
+  left: 12.67px;
+  background-color: rgba(255, 255, 255, 0.23);
+  backdrop-filter: blur(10.060976028442383px);
+  border-radius: 100px;
+}
+
+.heart-box {
+  position: absolute;
+  right: 12.67px;
+  top: 12.67px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(16.09756088256836px);
+  width: 48.293px;
+  height: 48.293px;
+}
+
+.NftMarketPlaceCard-Grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+  gap: 16.1px;
+}
+
+.Nft-MarketPlace-User-Image {
+  width: 100.61px;
+  height: 100.61px;
+  border-radius: 50%;
+  border: 2.012px solid #fff;
+  margin: 0 auto;
+}
+
+.Nft-MarketPlace-User-Image > img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+
+.Nft-MarketPlace-User-Detail {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  top: 90%;
+  text-align: center;
+}
+
+.Nft-MarketPlace-User-Detail > h2 {
+  color: #fff;
+  font-size: 20.122px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  letter-spacing: 0.201px;
+  width: 100%;
+  margin-top: 18px;
+}
+
+.Nft-MarketPlace-User-Detail > p {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%; /* 21px */
+  letter-spacing: 0.201px;
+  margin-top: 6.65px;
+}
+
+.Nft-MarketPlace-User-Detail > h4 {
+  color: #fff;
+  font-size: 16.098px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  letter-spacing: 0.201px;
+}
+
+.Nft-MarketPlace-User-Detail > h4 > span {
+  color: #31cd7f;
+  text-align: right;
+  font-size: 16.098px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  margin-left: 10px;
+  display: inline-block;
+}
