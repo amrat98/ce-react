@@ -128,12 +128,123 @@
 }
 .nft-active-btn {
   color: #fff;
-  background: #029CF5;
+  background: #029cf5;
 }
 .NftMarketPlaceCard-Filter-Container {
   margin-bottom: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 .NftMarketPlaceCard-Filter-Container > :nth-child(1) {
   display: flex;
   gap: 12px;
+}
+
+.NftMarketPlaceCard-Filter-Container > :nth-child(2) {
+  display: flex;
+}
+
+.NftMarketPlaceCard-Filter-Container > :nth-child(2) > span {
+  color: #fff;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  letter-spacing: 0.2px;
+  margin-left: 2px;
+}
+
+.hot-aution-head-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.hot-aution-head {
+  background: linear-gradient(107deg, #f90 5.39%, #ff5c00 45.42%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.Collections-head {
+  color: #029cf5;
+  position: relative;
+  display: inline-block;
+}
+
+.Nft-Collection-DrpDwn {
+  position: absolute;
+  z-index: 9;
+  min-width: 106px;
+  width: 100%;
+  background: #fff;
+  left: 0;
+  top: 100%;
+}
+
+.Nft-Collection-DrpDwn > p {
+  color: #000;
+  text-align: center;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  letter-spacing: 0.2px;
+  padding: 24px 13px;
+  cursor: pointer;
+}
+
+.Nft-Tap-Container {
+  padding: 4px;
+  border-radius: 50px;
+  border: 1px solid #393939;
+  background: #22252e;
+  height: max-content;
+}
+
+.tapButton {
+  border: none;
+  width: 95px;
+  padding: 6px 15px;
+  border-radius: 50px;
+}
+
+.transparentBg {
+  background: transparent;
+  color: #78819f;
+}
+
+.Tap-Btn-Parent-Container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.Tap-Btn-Parent-Container > :nth-child(1) {
+  display: flex;
+  gap: 27px;
+}
+
+.Tap-Btn-Parent-Right-Child {
+  display: flex;
+  gap: 7px;
+}
+
+.Tap-Btn-Parent-Right-Child > * {
+  padding: 16px 16px;
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  letter-spacing: 0.2px;
+  height: max-content;
+  border-radius: 12px;
+  background: rgba(2, 156, 245, 0.25);
+  border: none;
+}
+
+.Tap-Btn-Parent-Right-Child > :nth-last-child(1) {
+  position: relative;
+  cursor: pointer;
 }
