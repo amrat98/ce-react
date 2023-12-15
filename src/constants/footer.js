@@ -4,7 +4,7 @@ export const FOOTER_NAVIGATION = [
       { label: "Buy Crypto", url: "/exchange" },
       { label: "Market", url: "/market" },
       { label: "P2P", url: "/p2p" },
-      { label: "NFT", url: "/" },
+      { label: "NFT", url: "/nft" },
       { label: "My Wallet", url: "/wallet" },
     ],
   },
