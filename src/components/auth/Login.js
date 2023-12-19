@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Success } from "./Success";
 import { Header } from "../header/Header2";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import {
   validatePhone,
@@ -13,6 +13,7 @@ import { loginPhoneAsync, loginEmailAsync } from "../../redux/AuthSlice";
 import "./index.css";
 export const Login = () => {
   const dispatch = useDispatch();
+  const navigate = useNavigate();
   const [step, setStep] = useState(1);
   const [loginOption, setLoginOption] = useState("email");
   const [loginByPhone, setLoginByPhone] = useState({
@@ -27,7 +28,7 @@ export const Login = () => {
     identifier: "",
     password: "",
   });
- 
+
   const { email, password } = loginDetail;
 
   const handleInputChange = (e) => {
@@ -39,8 +40,6 @@ export const Login = () => {
     const { name, value } = e.target;
     setLoginByPhone((prevDate) => ({ ...prevDate, [name]: value }));
   };
-
-
 
   // submit form handle
 
@@ -68,8 +67,24 @@ export const Login = () => {
       }
 
       if (formIsValid) {
-        dispatch(loginEmailAsync(loginDetail));
-        setStep(3)
+        dispatch(
+          loginEmailAsync({
+            email: loginDetail.email,
+            password: loginDetail.password,
+            loginType: loginOption.toUpperCase(),
+          })
+        )
+          .then((data) => {
+            if (data?.payload?.responseCode === 200) {
+              localStorage.setItem('token', data?.payload?.responseData?.token)
+              setStep(3);
+              navigate("/profile");
+            }
+          })
+          .catch((error) => {
+            console.log(error, "Error");
+          });
+        //
       } else {
         setErrors(newErrors);
       }
@@ -94,162 +109,156 @@ export const Login = () => {
       }
 
       if (formIsValid) {
-        dispatch(loginPhoneAsync(loginByPhone));
-        setStep(3)
+        dispatch(
+          loginPhoneAsync({
+            loginType: loginOption.toUpperCase(),
+            mobile: loginByPhone.phone,
+            password: loginByPhone.password,
+            country_code: "+91"
+          })
+        )
+          .then((data) => {
+            // setStep(3)
+          })
+          .catch((error) => {
+            console.log(error, "Error");
+          });
       } else {
         setErrors(newErrors);
       }
     }
-  }
-    return (
-      <>
-        <Header />
-        {step !== 3 ? (
-          <>
-            <div className="Parent-Element">
-              <div className="container">
-                <div className="Forgot-Container">
-                  {step === 1 && (
-                    <div className="forgot-pass-frm-style">
-                      <h1 className="title">Login</h1>
-                      <div className="form-container">
-                        <div className="reset-mtd-box">
-                          <button
-                            onClick={() => setLoginOption("email")}
-                            className={
-                              loginOption === "email"
-                                ? "active-btn"
-                                : "inactive-btn"
-                            }
-                          >
-                            Email
-                          </button>
-                          <button
-                            onClick={() => setLoginOption("mobile")}
-                            className={
-                              loginOption === "mobile"
-                                ? "active-btn"
-                                : "inactive-btn"
-                            }
-                          >
-                            Mobile Number
-                          </button>
-                        </div>
-                        {loginOption === "email" ? (
-                          <>
-                            <div className="input-continer">
-                              <p>Email Address :</p>
-                              <div className="input-box">
-                                <input
-                                  type="text"
-                                  value={email}
-                                  onChange={(e) => handleInputChange(e)}
-                                  placeholder="Enter email address"
-                                  className="input"
-                                  name="email"
-                                />
-                              </div>
-                              <ErrorText>{errors.identifier}</ErrorText>
-                            </div>
-                            <div className="input-continer">
-                              <p>Password :</p>
-                              <div className="input-box">
-                                <input
-                                  type="text"
-                                  value={password}
-                                  onChange={(e) => handleInputChange(e)}
-                                  placeholder="Enter password"
-                                  className="input"
-                                  name="password"
-                                />
-                              </div>
-                              <ErrorText>{errors.password}</ErrorText>
-                              <div className="forgot-password">
-                                <span>
-                                  <input
-                                    type="checkbox"
-                                    id="remember_me"
-                                    name="remember_me"
-                                  />
-                                  <label for="remember_me"> Remember me</label>
-                                </span>
-                                <Link to={"/forgot-password"}>
-                                  Forgot Password
-                                </Link>
-                              </div>
-                            </div>
-                          </>
-                        ) : (
-                          <>
-                            <div className="input-continer">
-                              <p>Mobile Number :</p>
-                              <div className="input-box">
-                                <input
-                                  type="text"
-                                  value={loginByPhone.phone}
-                                  onChange={(e) => handlePhoneChange(e)}
-                                  placeholder="Enter mobile number"
-                                  className="input"
-                                />
-                              </div>
-                              <ErrorText>{errors.identifier}</ErrorText>
-                            </div>
-                            <div className="input-continer">
-                              <p>Password :</p>
-                              <div className="input-box">
-                                <input
-                                  type="text"
-                                  value={loginByPhone.password}
-                                  onChange={(e) => handlePhoneChange(e)}
-                                  placeholder="Enter password"
-                                  className="input"
-                                />
-                              </div>
-                              <ErrorText>{errors.password}</ErrorText>
-                              <div className="forgot-password">
-                                <span>
-                                  <input
-                                    type="checkbox"
-                                    id="remember_me"
-                                    name="remember_me"
-                                  />
-                                  <label for="remember_me"> Remember me</label>
-                                </span>
-                                <Link to={"/forgot-password"}>
-                                  Forgot Password
-                                </Link>
-                              </div>
-                            </div>
-                          </>
-                        )}
-                        <button
-                          className="form-cmn-btn"
-                          onClick={handleSubmit}
-                        >
-                          Submit
-                        </button>
-                      </div>
-                    </div>
-                  )}
-                  <div className="welcome-container">
-                    <img src="/assets/images/welcome.webp" alt="welcome" />
-                    <div className="welcome-text-Container">
-                      <h3>Welcome Back</h3>
-                      <p>
-                        Lorem ipsum dolor sit amet consectetur. Eget sagittis
-                        turpis porta facilisi suspendisse a
-                      </p>
-                    </div>
+  };
+  return (
+    <>
+      <Header />
+
+      <div className="Parent-Element">
+        <div className="container">
+          <div className="Forgot-Container">
+            {step === 1 && (
+              <div className="forgot-pass-frm-style">
+                <h1 className="title">Login</h1>
+                <div className="form-container">
+                  <div className="reset-mtd-box">
+                    <button
+                      onClick={() => setLoginOption("email")}
+                      className={
+                        loginOption === "email" ? "active-btn" : "inactive-btn"
+                      }
+                    >
+                      Email
+                    </button>
+                    <button
+                      onClick={() => setLoginOption("mobile")}
+                      className={
+                        loginOption === "mobile" ? "active-btn" : "inactive-btn"
+                      }
+                    >
+                      Mobile Number
+                    </button>
                   </div>
+                  {loginOption === "email" ? (
+                    <>
+                      <div className="input-continer">
+                        <p>Email Address :</p>
+                        <div className="input-box">
+                          <input
+                            type="text"
+                            value={email}
+                            onChange={(e) => handleInputChange(e)}
+                            placeholder="Enter email address"
+                            className="input"
+                            name="email"
+                          />
+                        </div>
+                        <ErrorText>{errors.identifier}</ErrorText>
+                      </div>
+                      <div className="input-continer">
+                        <p>Password :</p>
+                        <div className="input-box">
+                          <input
+                            type="text"
+                            value={password}
+                            onChange={(e) => handleInputChange(e)}
+                            placeholder="Enter password"
+                            className="input"
+                            name="password"
+                          />
+                        </div>
+                        <ErrorText>{errors.password}</ErrorText>
+                        <div className="forgot-password">
+                          <span>
+                            <input
+                              type="checkbox"
+                              id="remember_me"
+                              name="remember_me"
+                            />
+                            <label for="remember_me"> Remember me</label>
+                          </span>
+                          <Link to={"/forgot-password"}>Forgot Password</Link>
+                        </div>
+                      </div>
+                    </>
+                  ) : (
+                    <>
+                      <div className="input-continer">
+                        <p>Mobile Number :</p>
+                        <div className="input-box">
+                          <input
+                            type="text"
+                            value={loginByPhone.phone}
+                            onChange={(e) => handlePhoneChange(e)}
+                            placeholder="Enter mobile number"
+                            className="input"
+                          />
+                        </div>
+                        <ErrorText>{errors.identifier}</ErrorText>
+                      </div>
+                      <div className="input-continer">
+                        <p>Password :</p>
+                        <div className="input-box">
+                          <input
+                            type="text"
+                            value={loginByPhone.password}
+                            onChange={(e) => handlePhoneChange(e)}
+                            placeholder="Enter password"
+                            className="input"
+                          />
+                        </div>
+                        <ErrorText>{errors.password}</ErrorText>
+                        <div className="forgot-password">
+                          <span>
+                            <input
+                              type="checkbox"
+                              id="remember_me"
+                              name="remember_me"
+                            />
+                            <label for="remember_me"> Remember me</label>
+                          </span>
+                          <Link to={"/forgot-password"}>Forgot Password</Link>
+                        </div>
+                      </div>
+                    </>
+                  )}
+                  <button className="form-cmn-btn" onClick={handleSubmit}>
+                    Submit
+                  </button>
                 </div>
               </div>
+            )}
+            <div className="welcome-container">
+              <img src="/assets/images/welcome.webp" alt="welcome" />
+              <div className="welcome-text-Container">
+                <h3>Welcome Back</h3>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur. Eget sagittis turpis
+                  porta facilisi suspendisse a
+                </p>
+              </div>
             </div>
-          </>
-        ) : (
-          <>
-            <Success />
-          </>
-        )}
-      </>
-    );
-  };
+          </div>
+        </div>
+      </div>
+    </>
+  );
+};

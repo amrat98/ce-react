@@ -1,27 +1,26 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios";
 import config from "../config";
+import { authToken } from "./UserSlice";
 export const LOGIN_EMAIL = "auth/loginByEmail";
 export const LOGIN_PHONE = "auth/loginByPhone";
 export const SIGNUP = "auth/signup";
 export const FORGOT_PASSWORD = "auth/forgotPassword";
 export const RESET_PASSWORD = "auth/resetPassword";
 export const VERIFY_OTP = "auth/verifyOtp";
-
+export const SEND_OTP = "auth/sendOtp";
 export const signUpAsync = createAsyncThunk(SIGNUP, async (userData) => {
   const response = await axios.post(
     `${config.baseUrl}${config.endpoints.signUp}`,
     userData
   );
-  console.log(response);
   return response.data;
 });
-
 export const loginEmailAsync = createAsyncThunk(
   LOGIN_EMAIL,
   async (userData) => {
     const response = await axios.post(
-      `${config.baseUrl}${config.endpoints.loginByEmail}`,
+      `${config.baseUrl}${config.endpoints.login}`,
       userData
     );
     console.log(response);
@@ -33,7 +32,7 @@ export const loginPhoneAsync = createAsyncThunk(
   LOGIN_PHONE,
   async (userData) => {
     const response = await axios.post(
-      `${config.baseUrl}${config.endpoints.loginByPhone}`,
+      `${config.baseUrl}${config.endpoints.login}`,
       userData
     );
     console.log(response);
@@ -45,10 +44,15 @@ export const resetPassAsync = createAsyncThunk(
   RESET_PASSWORD,
   async (userData) => {
     const response = await axios.post(
-      "http://3.26.99.191:80/auth/signup",
-      userData
+      `${config.baseUrl}${config.endpoints.resetPassword}`,
+      userData,
+      {
+        headers: {
+          "Content-Type": "application/json", // Specify the content type as JSON
+          token: authToken, // Add any other headers as needed
+        },
+      }
     );
-    console.log(response);
     return response.data;
   }
 );
@@ -57,20 +61,35 @@ export const forgotPassAsync = createAsyncThunk(
   FORGOT_PASSWORD,
   async (userData) => {
     const response = await axios.post(
-      "http://3.26.99.191:80/auth/signup",
-      userData
+      `${config.baseUrl}${config.endpoints.forgotPassword}`,
+      userData,
+      {
+        headers: {
+          "Content-Type": "application/json", // Specify the content type as JSON
+          token: authToken, // Add any other headers as needed
+        },
+      }
+      // {
+      //   token: authToken,
+      // }
     );
-    console.log(response);
     return response.data;
   }
 );
 
 export const verifyOtpAsync = createAsyncThunk(VERIFY_OTP, async (otp) => {
   const response = await axios.post(
-    `${config.baseUrl}${config.endpoints.verifyOtp}`,
+    `${config.baseUrl}${config.endpoints.verifySignupOtp}`,
     otp
   );
-  console.log(response);
+  return response.data;
+});
+
+export const sendOtpAsync = createAsyncThunk(SEND_OTP, async (data) => {
+  const response = await axios.post(
+    `${config.baseUrl}${config.endpoints.sendOtp}`,
+    data
+  );
   return response.data;
 });
 
@@ -80,6 +99,8 @@ const authSlice = createSlice({
     isAuthenticated: false,
     user: null,
     error: null,
+    signupStep: 1,
+    status: "idle",
   },
   reducers: {
     logout: (state) => {
@@ -93,6 +114,7 @@ const authSlice = createSlice({
         state.isAuthenticated = true;
         state.user = action.payload;
         state.error = null;
+        state.signupStep = 2;
       })
       .addCase(signUpAsync.rejected, (state, action) => {
         state.isAuthenticated = false;
@@ -123,11 +145,18 @@ const authSlice = createSlice({
         state.isAuthenticated = true;
         state.user = action.payload;
         state.error = null;
+        state.signupStep = 1;
       })
       .addCase(verifyOtpAsync.rejected, (state, action) => {
         state.isAuthenticated = false;
         state.user = null;
         state.error = action.error.message;
+      })
+      .addCase(sendOtpAsync.fulfilled, (state, action) => {
+        state.status = "succeeded";
+      })
+      .addCase(sendOtpAsync.rejected, (state, action) => {
+        state.status = "failed";
       });
   },
 });

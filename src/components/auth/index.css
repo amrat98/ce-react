@@ -139,7 +139,7 @@
   font-style: normal;
   font-weight: 400;
   line-height: normal;
-  margin: 0 auto;
+  align-self: flex-end;
 }
 
 .pass-change-successfully {

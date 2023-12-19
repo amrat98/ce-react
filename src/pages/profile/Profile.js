@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Header } from "../../components/header/Header";
 import { Footer } from "../../components/footer/Footer";
 import { Sidebar } from "../../components/sidebar/Sidebar";
@@ -15,6 +15,8 @@ import { Nominee } from "./nominee/Nominee";
 import { Notification } from "./notification/Notification";
 import { TransferHistory } from "./transfer-history/TransferHistory";
 import { Button } from "../../components/button/Button";
+import { useSelector, useDispatch } from "react-redux";
+import { userProfileAsync, loginHistoryAsync } from "../../redux/UserSlice";
 import "./Profile.css";
 const option = [
   { label: "Profile", bool: true },
@@ -33,8 +35,11 @@ const style = {
   minWidth: "209px",
 };
 export const Profile = () => {
+  const user = useSelector((state) => state);
+  const dispatch = useDispatch();
   const [selectedOption, setSelectedOption] = useState(option);
   const [title, setTitle] = useState("Profile");
+  const [pageNumber, setPageNumber] = useState("1");
   const handleClick = (index) => {
     setSelectedOption((prevOption) =>
       prevOption.map((item, ind) =>
@@ -46,6 +51,23 @@ export const Profile = () => {
   const handleTitle = (title) => {
     setTitle(title);
   };
+
+  const handleSwitch = () => {
+    switch (title) {
+      case "Profile":
+        dispatch(userProfileAsync(pageNumber));
+        break;
+      case "Login History":
+        dispatch(loginHistoryAsync(pageNumber));
+        break;
+      default:
+      // code block
+    }
+  };
+
+  useEffect(() => {
+    handleSwitch();
+  }, [title]);
 
   return (
     <>
