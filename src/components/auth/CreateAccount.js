@@ -3,7 +3,7 @@ import { useState } from "react";
 import { Header } from "../header/Header2";
 import {
   signUpAsync,
-  verifyOtpAsync,
+  verifySignupOtpAsync,
   sendOtpAsync,
 } from "../../redux/AuthSlice";
 import { useDispatch, useSelector } from "react-redux";
@@ -75,10 +75,10 @@ export const CreateAccount = () => {
 
     if (!mobile.trim()) {
       formIsValid = false;
-      newErrors.phone = "Phone number is required";
+      newErrors.mobile = "Phone number is required";
     } else if (!validatePhone(mobile)) {
       formIsValid = false;
-      newErrors.phone = "Enter a valid 10-digit phone number";
+      newErrors.mobile = "Enter a valid 10-digit phone number";
     }
     if (!confirmPassword.trim()) {
       formIsValid = false;
@@ -104,7 +104,7 @@ export const CreateAccount = () => {
 
   const handleVerifyOtp = async () => {
     dispatch(
-      verifyOtpAsync({
+      verifySignupOtpAsync({
         email: email,
         email_otp: email_otp,
         country_code: country_code,

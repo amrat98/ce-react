@@ -75,16 +75,15 @@ export const Login = () => {
           })
         )
           .then((data) => {
-            if (data?.payload?.responseCode === 200) {
-              localStorage.setItem('token', data?.payload?.responseData?.token)
-              setStep(3);
+            if (data?.payload?.success) {
+              localStorage.setItem("token", data?.payload?.responseData?.token);
               navigate("/profile");
             }
           })
           .catch((error) => {
             console.log(error, "Error");
           });
-        //
+
       } else {
         setErrors(newErrors);
       }
@@ -114,11 +113,14 @@ export const Login = () => {
             loginType: loginOption.toUpperCase(),
             mobile: loginByPhone.phone,
             password: loginByPhone.password,
-            country_code: "+91"
+            country_code: "+91",
           })
         )
           .then((data) => {
-            // setStep(3)
+            if (data?.payload?.success) {
+              localStorage.setItem("token", data?.payload?.responseData?.token);
+              navigate("/profile");
+            }
           })
           .catch((error) => {
             console.log(error, "Error");

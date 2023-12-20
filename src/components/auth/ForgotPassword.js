@@ -40,6 +40,7 @@ export const ForgotPassword = () => {
     mobile: "",
   });
 
+  const [otp, setOtp] = useState("");
   const { email, country_code, mobile } = userDetail;
   const dispatch = useDispatch();
   const navigate = useNavigate();
@@ -47,6 +48,7 @@ export const ForgotPassword = () => {
   const { newPassword, confirmPassword } = passwords;
 
   const handleSendOtp = async () => {
+    setLastResentAt(Date.now())
     let formIsValid = true;
     if (forgotOption === "email") {
       if (!email.trim()) {
@@ -67,8 +69,6 @@ export const ForgotPassword = () => {
           sendOtpAsync({
             loginType: forgotOption.toUpperCase(),
             email: email,
-            country_code: country_code,
-            mobile: mobile,
           })
         )
           .then((data) => {
@@ -98,6 +98,7 @@ export const ForgotPassword = () => {
         dispatch(
           sendOtpAsync({
             loginType: forgotOption.toUpperCase(),
+            mobile: mobile,
           })
         )
           .then((data) => {
@@ -142,7 +143,13 @@ export const ForgotPassword = () => {
       }));
     }
     if (formIsValid) {
-      dispatch(forgotPassAsync(passwords));
+      dispatch(forgotPassAsync(passwords))
+        .then((data) => {
+          if (data?.payload?.success) {
+            navigate("/login");
+          }
+        })
+        .catch((error) => {});
     }
   };
 
@@ -159,6 +166,43 @@ export const ForgotPassword = () => {
   const handleChange = (e) => {
     const { name, value } = e.target;
     setUserDetail((prevState) => ({ ...prevState, [name]: value }));
+  };
+
+  const handleVerifyOtp = () => {
+    if (forgotOption === "email") {
+      dispatch(
+        verifyOtpAsync({
+          loginType: forgotOption.toUpperCase(),
+          email: email,
+          otp: otp,
+        })
+      )
+        .then((data) => {
+          if (data?.payload?.success) {
+            setStep(3);
+          }
+        })
+        .catch((error) => {
+          console.log(error);
+        });
+    } else {
+      dispatch(
+        verifyOtpAsync({
+          loginType: forgotOption.toUpperCase(),
+          mobile: mobile,
+          country_code: country_code,
+          otp: otp,
+        })
+      )
+        .then((data) => {
+          if (data?.payload?.success) {
+            setStep(3);
+          }
+        })
+        .catch((error) => {
+          console.log(error);
+        });
+    }
   };
   return (
     <>
@@ -241,20 +285,21 @@ export const ForgotPassword = () => {
                     <div className="input-box">
                       <input
                         type="text"
-                        value={email}
-                        onChange={(e) => handlePasswordChange(e)}
+                        value={otp}
+                        onChange={(e) => setOtp(e.target.value)}
                         placeholder="Enter your OTP"
                         className="input"
+                        maxLength={6}
                       />
                     </div>
-                    <span className="resend-otp" onClick={handleSendOtp}>
+                    <span className="resend-otp" onClick={handleSendOtp} style={{ cursor: !isEnabled ? 'pointer' : 'not-allowed' }}>
                       Resend OTP
                     </span>
                     {lastResentAt !== "" && (
                       <Timer duration={30} onTimeout={handleTimeout} />
                     )}
                   </div>
-                  <button className="form-cmn-btn" onClick={() => setStep(3)}>
+                  <button className="form-cmn-btn" onClick={handleVerifyOtp}>
                     Verify
                   </button>
                 </div>

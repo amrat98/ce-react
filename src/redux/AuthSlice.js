@@ -7,8 +7,9 @@ export const LOGIN_PHONE = "auth/loginByPhone";
 export const SIGNUP = "auth/signup";
 export const FORGOT_PASSWORD = "auth/forgotPassword";
 export const RESET_PASSWORD = "auth/resetPassword";
-export const VERIFY_OTP = "auth/verifyOtp";
+export const VERIFY_SIGNUP_OTP = "auth/verifySignup";
 export const SEND_OTP = "auth/sendOtp";
+export const VERIFY_OTP = "auth/verifyOtp"
 export const signUpAsync = createAsyncThunk(SIGNUP, async (userData) => {
   const response = await axios.post(
     `${config.baseUrl}${config.endpoints.signUp}`,
@@ -65,19 +66,24 @@ export const forgotPassAsync = createAsyncThunk(
       userData,
       {
         headers: {
-          "Content-Type": "application/json", // Specify the content type as JSON
-          token: authToken, // Add any other headers as needed
+          "Content-Type": "application/json",
+          token: authToken,
         },
       }
-      // {
-      //   token: authToken,
-      // }
     );
     return response.data;
   }
 );
 
-export const verifyOtpAsync = createAsyncThunk(VERIFY_OTP, async (otp) => {
+export const verifyOtpAsync = createAsyncThunk(VERIFY_SIGNUP_OTP, async (otp) => {
+  const response = await axios.post(
+    `${config.baseUrl}${config.endpoints.verifyOtp}`,
+    otp
+  );
+  return response.data;
+});
+
+export const verifySignupOtpAsync = createAsyncThunk(VERIFY_SIGNUP_OTP, async (otp) => {
   const response = await axios.post(
     `${config.baseUrl}${config.endpoints.verifySignupOtp}`,
     otp
@@ -141,13 +147,13 @@ const authSlice = createSlice({
         state.user = null;
         state.error = action.error.message;
       })
-      .addCase(verifyOtpAsync.fulfilled, (state, action) => {
+      .addCase(verifySignupOtpAsync.fulfilled, (state, action) => {
         state.isAuthenticated = true;
         state.user = action.payload;
         state.error = null;
         state.signupStep = 1;
       })
-      .addCase(verifyOtpAsync.rejected, (state, action) => {
+      .addCase(verifySignupOtpAsync.rejected, (state, action) => {
         state.isAuthenticated = false;
         state.user = null;
         state.error = action.error.message;

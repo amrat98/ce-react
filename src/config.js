@@ -3,7 +3,7 @@ const config = {
   endpoints: {
     login: "/v0/user/login",
     signUp: "/v0/user/user-signup",
-    verifyOtp: "/v0/user/verify-signup-otp",
+    verifyOtp: "/v0/user/verify-otp",
     verifySignupOtp: "/v0/user/verify-signup-otp",
     forgotPassword: "/v0/user/forgot-password",
     sendOtp: "/v0/user/send-otp",

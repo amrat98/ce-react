@@ -66,6 +66,10 @@ export const Profile = () => {
   };
 
   useEffect(() => {
+
+  },[])
+
+  useEffect(() => {
     handleSwitch();
   }, [title]);
 
