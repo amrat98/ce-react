@@ -4,6 +4,7 @@ import config from "../config";
 export const userProfile = "user/get-user-profile";
 export const userLoginHistory = "user/get-login-history";
 export const getByUser = "user/get-by-user";
+export const getUserIPAdd = "user/get-ip";
 export const authToken = localStorage.getItem("token");
 export const userProfileAsync = createAsyncThunk(userProfile, async (data) => {
   const response = await axios.get(
@@ -47,6 +48,11 @@ export const getUserAsync = createAsyncThunk(getByUser, async (data) => {
   return response.data;
 });
 
+export const getUserIPAsync = createAsyncThunk(getUserIPAdd, async (data) => {
+  const response = await axios.get(`https://api.ipify.org`);
+  return response.data;
+});
+
 const userSlice = createSlice({
   name: "user",
   initialState: {
@@ -54,6 +60,7 @@ const userSlice = createSlice({
     error: null,
     help: "user",
     loginHistory: [],
+    ipAddress: null,
   },
   extraReducers: (builder) => {
     builder
@@ -72,6 +79,13 @@ const userSlice = createSlice({
       })
       .addCase(loginHistoryAsync.rejected, (state, action) => {
         state.user = null;
+        state.error = action.error;
+      })
+      .addCase(getUserIPAsync.fulfilled, (state, action) => {
+        state.ipAddress = action.payload;
+        state.error = action.error;
+      })
+      .addCase(getUserIPAsync.rejected, (state, action) => {
         state.error = action.error;
       });
   },
