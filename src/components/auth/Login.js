@@ -2,14 +2,14 @@ import { useState } from "react";
 import { Success } from "./Success";
 import { Header } from "../header/Header2";
 import { Link, useNavigate } from "react-router-dom";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import {
   validatePhone,
   validateEmail,
   validatePassword,
 } from "../../utlis/Validation";
 import { ErrorText } from "../error/Error";
-import { loginPhoneAsync, loginEmailAsync } from "../../redux/AuthSlice";
+import { loginPhoneAsync, loginEmailAsync , loginUser} from "../../redux/AuthSlice";
 import "./index.css";
 export const Login = () => {
   const dispatch = useDispatch();
@@ -28,6 +28,7 @@ export const Login = () => {
     identifier: "",
     password: "",
   });
+
 
   const { email, password } = loginDetail;
 
@@ -77,6 +78,7 @@ export const Login = () => {
           .then((data) => {
             if (data?.payload?.success) {
               localStorage.setItem("token", data?.payload?.responseData?.token);
+              dispatch(loginUser())
               navigate("/profile");
             }
           })
@@ -119,6 +121,7 @@ export const Login = () => {
           .then((data) => {
             if (data?.payload?.success) {
               localStorage.setItem("token", data?.payload?.responseData?.token);
+              dispatch(loginUser())
               navigate("/profile");
             }
           })

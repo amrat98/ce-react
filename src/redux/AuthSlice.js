@@ -107,12 +107,16 @@ const authSlice = createSlice({
     error: null,
     signupStep: 1,
     status: "idle",
+    isLogin: false,
   },
   reducers: {
     logout: (state) => {
       state.isAuthenticated = false;
       state.user = null;
     },
+    loginUser: (state) => {
+      state.isLogin = true;
+    }
   },
   extraReducers: (builder) => {
     builder
@@ -167,5 +171,5 @@ const authSlice = createSlice({
   },
 });
 
-export const { logout } = authSlice.actions;
+export const { logout , loginUser} = authSlice.actions;
 export default authSlice.reducer;
