@@ -1,7 +1,11 @@
 import { Link, useNavigate } from "react-router-dom";
 import { useState } from "react";
 import { Header } from "../header/Header2";
-import { signUpAsync, verifyOtpAsync } from "../../redux/AuthSlice";
+import {
+  signUpAsync,
+  verifySignupOtpAsync,
+  sendOtpAsync,
+} from "../../redux/AuthSlice";
 import { useDispatch, useSelector } from "react-redux";
 import { ErrorText } from "../error/Error";
 import {
@@ -9,28 +13,36 @@ import {
   validateEmail,
   validatePassword,
 } from "../../utlis/Validation";
+import Timer from "../timer/Timer";
 import "./index.css";
+
 export const CreateAccount = () => {
-  const [step, setStep] = useState(1);
   const [userDetail, setUserDetail] = useState({
     email: "",
-    phone: "",
+    mobile: "",
     password: "",
     confirmPassword: "",
+    country_code: "+91",
   });
   const [errors, setErrors] = useState({
     email: "",
-    phone: "",
+    mobile: "",
     password: "",
     confirmPassword: "",
-    otp: "",
+    otp: false,
   });
-  const [otp, setOtp] = useState("");
+  const [otp, setOtp] = useState({
+    email_otp: "",
+    mobile_otp: "",
+  });
+  const [lastResentAt , setLastResentAt] = useState("")
   const [passwordMatch, setPasswordMatch] = useState(true);
+  const [isEnabled , setIsEnabled] = useState(false)
   const dispatch = useDispatch();
   const navigate = useNavigate();
-  const authStatus = useSelector((state) => console.log(state));
-  const { email, phone, password, confirmPassword } = userDetail;
+  const authStatus = useSelector((state) => state);
+  const { email, mobile, password, confirmPassword, country_code } = userDetail;
+  const { email_otp, mobile_otp } = otp;
   const handleInputChange = (e) => {
     const { name, value } = e.target;
     setUserDetail((prevDate) => ({ ...prevDate, [name]: value }));
@@ -61,12 +73,12 @@ export const CreateAccount = () => {
         "Password must be at least 8 characters long and contain at least one letter and one number";
     }
 
-    if (!phone.trim()) {
+    if (!mobile.trim()) {
       formIsValid = false;
-      newErrors.phone = "Phone number is required";
-    } else if (!validatePhone(phone)) {
+      newErrors.mobile = "Phone number is required";
+    } else if (!validatePhone(mobile)) {
       formIsValid = false;
-      newErrors.phone = "Enter a valid 10-digit phone number";
+      newErrors.mobile = "Enter a valid 10-digit phone number";
     }
     if (!confirmPassword.trim()) {
       formIsValid = false;
@@ -77,8 +89,7 @@ export const CreateAccount = () => {
         "Password confirmation failed. Please try again.";
     }
     if (formIsValid) {
-      dispatch(signUpAsync({ email: email, password: password, phone: phone }));
-      // setStep(2);
+      dispatch(signUpAsync(userDetail));
     } else {
       console.log(newErrors);
       setErrors(newErrors);
@@ -86,15 +97,51 @@ export const CreateAccount = () => {
   };
 
   const handleOtp = (e) => {
-    setOtp(e.target.value);
-    setErrors((prevState) => ({ ...prevState, otp: otp.length === 4 }));
+    const { value, name } = e.target;
+    setOtp((prevState) => ({ ...prevState, [name]: value }));
+    // setErrors((prevState) => ({ ...prevState, otp: otp?.email_otp?.length === 4 }));
   };
 
-  const handleVerifyOtp = () => {
-    if (errors.otp) {
-      dispatch(verifyOtpAsync({ email: email, phone: phone, otp: otp }));
-      navigate("/login");
-    }
+  const handleVerifyOtp = async () => {
+    dispatch(
+      verifySignupOtpAsync({
+        email: email,
+        email_otp: email_otp,
+        country_code: country_code,
+        mobile: mobile,
+        mobile_otp: mobile_otp,
+      })
+    )
+      .then(() => {
+        navigate("/login");
+      })
+      .catch((error) => {
+        console.log(error, "error");
+      });
+  };
+
+  const handleSendOtp = () => {
+    setLastResentAt(Date.now())
+    setIsEnabled(true);
+    dispatch(
+      sendOtpAsync({
+        email: email,
+        mobile: mobile,
+        country_code: userDetail.country_code,
+        loginType: "BOTH"
+      })
+    )
+      .then((data) => {
+        console.log(data , "Data")
+      })
+      .catch((error) => {
+        console.log(error, "Error");
+      });
+  };
+
+  const handleTimeout = () => {
+    setIsEnabled(false);
+    setLastResentAt("")
   };
   return (
     <>
@@ -103,7 +150,7 @@ export const CreateAccount = () => {
       <div className="Parent-Element">
         <div className="container">
           <div className="Forgot-Container">
-            {step === 1 && (
+            {authStatus?.auth?.signupStep === 1 && (
               <>
                 <div className="forgot-pass-frm-style">
                   <h1 className="title">Create Account</h1>
@@ -127,14 +174,14 @@ export const CreateAccount = () => {
                       <div className="input-box">
                         <input
                           type="text"
-                          value={phone}
+                          value={mobile}
                           onChange={(e) => handleInputChange(e)}
                           placeholder="Enter mobile number"
                           className="input"
-                          name="phone"
+                          name="mobile"
                         />
                       </div>
-                      <ErrorText>{errors.phone}</ErrorText>
+                      <ErrorText>{errors.mobile}</ErrorText>
                     </div>
                     <div className="input-continer">
                       <p>Password :</p>
@@ -203,7 +250,7 @@ export const CreateAccount = () => {
                 </div>
               </>
             )}
-            {step === 2 && (
+            {authStatus?.auth?.signupStep === 2 && (
               <div className="forgot-pass-frm-style">
                 <h1 className="title">OTP Verification</h1>
                 <div className="form-container">
@@ -212,15 +259,33 @@ export const CreateAccount = () => {
                     <div className="input-box">
                       <input
                         type="text"
-                        value={otp}
-                        maxLength={4}
-                        onChange={(e) => handleOtp(e.target.value)}
-                        placeholder="Enter your OTP"
+                        value={otp?.email_otp}
+                        maxLength={6}
+                        onChange={(e) => handleOtp(e)}
+                        placeholder="Please enter the OTP sent to your registered email ID"
                         className="input"
+                        name="email_otp"
                       />
                     </div>
-                    <span className="resend-otp">Resend OTP</span>
+                    <p>Enter OTP</p>
+                    <div className="input-box">
+                      <input
+                        type="text"
+                        value={otp?.mobile_otp}
+                        maxLength={6}
+                        onChange={(e) => handleOtp(e)}
+                        placeholder="Please enter the OTP sent to your registered mobile number"
+                        className="input"
+                        name="mobile_otp"
+                      />
+                    </div>
+                    <span className="resend-otp" onClick={handleSendOtp} style={{ cursor: !isEnabled ? 'pointer' : 'not-allowed' }}>Resend OTP</span>
                   </div>
+                  {
+                    lastResentAt !== "" && (
+                      <Timer duration={30} onTimeout={handleTimeout}/>
+                    )
+                   }
                   <button className="form-cmn-btn" onClick={handleVerifyOtp}>
                     Verify
                   </button>

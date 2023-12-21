@@ -1,6 +1,6 @@
 import { NoData } from "../nodata/NoData";
 import "./CommonTable.css";
-export const Table = ({ head, data }) => {
+export const Table = ({ head, data, children }) => {
   return (
     <>
       <table className="cmn-table">
@@ -11,9 +11,8 @@ export const Table = ({ head, data }) => {
             ))}
           </tr>
         </thead>
-        {data && <tbody></tbody>}
+        <tbody>{children}</tbody>
       </table>
-      {!data && <NoData label={"No record Found!"} />}
     </>
   );
 };
